@@ -1,63 +1,99 @@
+'use client';
+
 import Link from 'next/link';
+import { useState } from 'react';
 import styles from './Footer.module.css';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle newsletter signup
+    console.log('Newsletter signup:', email);
+    setEmail('');
+  };
 
   return (
     <footer className={styles.footer}>
+      <div className={styles.line}></div>
+
       <div className={styles.container}>
-        <div className={styles.top}>
-          <div className={styles.brand}>
-            <h3 className={styles.logo}>YOLOANA</h3>
-            <p className={styles.tagline}>Arquitectura Contemporánea</p>
+        <div className={styles.grid}>
+          {/* Address Section */}
+          <div className={styles.address}>
+            <p>Calle de la Arquitectura 123</p>
+            <p>Madrid, 28001</p>
+            <p>España</p>
+
+            <div className={styles.contactLinks}>
+              <a href="tel:+34912345678" className={styles.linkWithLine}>
+                <span>+34 912 345 678</span>
+                <div className={styles.underline}></div>
+              </a>
+              <a href="mailto:hola@yoloana.com" className={styles.linkWithLine}>
+                <span>hola@yoloana.com</span>
+                <div className={styles.underline}></div>
+              </a>
+            </div>
           </div>
 
-          <div className={styles.links}>
-            <div className={styles.column}>
-              <h4 className={styles.columnTitle}>Navegación</h4>
-              <nav className={styles.nav}>
-                <Link href="/" className={styles.link}>Home</Link>
-                <Link href="/proyectos" className={styles.link}>Proyectos</Link>
-                <Link href="/estudio" className={styles.link}>Estudio</Link>
-                <Link href="/metodo" className={styles.link}>Método</Link>
-                <Link href="/contacto" className={styles.link}>Contacto</Link>
-              </nav>
-            </div>
+          {/* Sitemap */}
+          <nav className={styles.sitemap}>
+            <Link href="/" className={styles.linkWithLine}>
+              <span>Home</span>
+              <div className={styles.underline}></div>
+            </Link>
+            <Link href="/proyectos" className={styles.linkWithLine}>
+              <span>Proyectos</span>
+              <div className={styles.underline}></div>
+            </Link>
+            <Link href="/estudio" className={styles.linkWithLine}>
+              <span>Estudio</span>
+              <div className={styles.underline}></div>
+            </Link>
+            <Link href="/metodo" className={styles.linkWithLine}>
+              <span>Método</span>
+              <div className={styles.underline}></div>
+            </Link>
+            <Link href="/contacto" className={styles.linkWithLine}>
+              <span>Contacto</span>
+              <div className={styles.underline}></div>
+            </Link>
+          </nav>
 
-            <div className={styles.column}>
-              <h4 className={styles.columnTitle}>Contacto</h4>
-              <div className={styles.contact}>
-                <a href="mailto:hola@yoloana.com" className={styles.link}>
-                  hola@yoloana.com
-                </a>
-                <a href="tel:+34000000000" className={styles.link}>
-                  +34 000 000 000
-                </a>
-              </div>
-            </div>
-
-            <div className={styles.column}>
-              <h4 className={styles.columnTitle}>Síguenos</h4>
-              <div className={styles.social}>
-                <a href="#" className={styles.link} target="_blank" rel="noopener noreferrer">
-                  Instagram
-                </a>
-                <a href="#" className={styles.link} target="_blank" rel="noopener noreferrer">
-                  LinkedIn
-                </a>
-                <a href="#" className={styles.link} target="_blank" rel="noopener noreferrer">
-                  Pinterest
-                </a>
-              </div>
-            </div>
+          {/* Newsletter */}
+          <div className={styles.newsletter}>
+            <form onSubmit={handleSubmit} className={styles.form}>
+              <input
+                type="email"
+                placeholder="MAIL"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className={styles.input}
+                required
+              />
+              <button type="submit" className={styles.submit}>
+                SIGN UP
+              </button>
+            </form>
+            <p className={styles.privacy}>
+              Al suscribirte aceptas nuestra{' '}
+              <Link href="/privacidad" className={styles.privacyLink}>
+                política de privacidad
+              </Link>
+              .
+            </p>
           </div>
         </div>
 
+        {/* Bottom */}
         <div className={styles.bottom}>
-          <p className={styles.copyright}>
-            © {currentYear} YOLOANA. Todos los derechos reservados.
-          </p>
+          <div className={styles.bottomLine}></div>
+          <Link href="/privacidad" className={styles.linkWithLine}>
+            <span>Política de Privacidad</span>
+            <div className={styles.underline}></div>
+          </Link>
         </div>
       </div>
     </footer>
