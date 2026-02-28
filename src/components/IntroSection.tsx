@@ -30,11 +30,9 @@ export default function IntroSection({
       </div>
 
       {buttonText && buttonLink && (
-        <div className={styles.buttonWrapper}>
-          <Button href={buttonLink} variant="dark">
-            {buttonText}
-          </Button>
-        </div>
+        <Button href={buttonLink} variant="dark">
+          {buttonText}
+        </Button>
       )}
     </section>
   );
