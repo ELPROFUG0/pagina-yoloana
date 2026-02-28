@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import styles from './Navigation.module.css';
 
 const navLinks = [
@@ -14,9 +15,49 @@ const navLinks = [
 
 export default function Navigation() {
   const pathname = usePathname();
+  const [isVisible, setIsVisible] = useState(true);
+  const [isAtTop, setIsAtTop] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [animateLinks, setAnimateLinks] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const wasAtTop = lastScrollY < 100;
+      const nowAtTop = currentScrollY < 100;
+
+      // Determinar si estamos en la parte superior
+      setIsAtTop(nowAtTop);
+
+      // Disparar animación cuando entramos al hero
+      if (!wasAtTop && nowAtTop) {
+        setAnimateLinks(true);
+        setTimeout(() => setAnimateLinks(false), 1000);
+      }
+
+      if (currentScrollY < 100) {
+        // Visible en el hero
+        setIsVisible(true);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolleando hacia arriba
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolleando hacia abajo
+        setIsVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
 
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${isVisible ? styles.visible : styles.hidden} ${isAtTop ? styles.transparent : styles.solid} ${animateLinks ? styles.animate : ''}`}>
       <div className={styles.logo}>
         <Link href="/">YOLOANA</Link>
       </div>
