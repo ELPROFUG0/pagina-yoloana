@@ -1,4 +1,5 @@
 import HeroCarousel, { Slide } from '@/components/HeroCarousel';
+import IntroSection from '@/components/IntroSection';
 import FeaturedSection from '@/components/FeaturedSection';
 import ProjectGrid, { Project } from '@/components/ProjectGrid';
 
@@ -78,6 +79,16 @@ export default function Home() {
   return (
     <main>
       <HeroCarousel slides={slides} />
+
+      <IntroSection
+        title="Presentamos YOLOANA Estudio"
+        paragraphs={[
+          'Arraigado en las tradiciones de la arquitectura contemporánea, YOLOANA nace de un profundo respeto por la artesanía y los materiales atemporales. Honramos el patrimonio arquitectónico combinando técnicas probadas con simplicidad moderna.',
+          'Cada proyecto que creamos lleva el espíritu de la elegancia discreta: una elegancia subestimada que se encuentra en el equilibrio de forma, función y naturaleza. Nuestra misión es crear espacios que inviten a la calma, la reflexión y la presencia duradera en la vida cotidiana.',
+        ]}
+        buttonText="Descubre nuestro estudio"
+        buttonLink="/estudio"
+      />
 
       <FeaturedSection
         tagline="Nuestra filosofía"
