@@ -78,11 +78,21 @@
 .nav.transparent .links {
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  gap: 4px;
 }
 
 .nav.transparent .link {
   opacity: 1;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+.nav.transparent .logo {
+  font-size: 16px;
+}
+
+.nav.transparent .bracketText {
+  font-size: 12px;
 }
 
 .nav.transparent.animate .link {
