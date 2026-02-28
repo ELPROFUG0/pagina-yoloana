@@ -1,0 +1,129 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-xl) 0 var(--spacing-xl);
+  z-index: 1000;
+  background: linear-gradient(to bottom, rgba(245, 242, 238, 0.95) 0%, rgba(245, 242, 238, 0) 100%);
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.7;
+}
+
+.links {
+  display: flex;
+  gap: var(--spacing-xs);
+  align-items: center;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+.bracket {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+}
+
+.bracketText {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-text);
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.label {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.link.active .label {
+  opacity: 1;
+}
+
+@media (max-width: 1199.98px) {
+  .nav {
+    padding: var(--spacing-sm) var(--spacing-md) 0 var(--spacing-md);
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .link {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+  }
+
+  .links {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .link {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+}
