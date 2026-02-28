@@ -1,0 +1,134 @@
+.contactSection {
+  padding: 60px var(--spacing-xl) 80px var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.headingWrapper {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.description {
+  font-size: 16px;
+  color: var(--color-text);
+  opacity: 0.7;
+  margin: 0;
+}
+
+.contentWrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contactLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(235, 233, 228);
+  border-radius: 8px;
+  padding: 20px 24px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contactLink:hover {
+  background-color: rgb(225, 223, 218);
+}
+
+.contactLink:hover .valueWrapper {
+  transform: translateX(-10px);
+}
+
+.contactLink:hover .arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.label {
+  flex-shrink: 0;
+}
+
+.label p {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(42, 49, 50);
+  margin: 0;
+}
+
+.valueWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  transition: transform 0.3s ease;
+}
+
+.value {
+  text-align: right;
+  min-width: 0;
+}
+
+.value p {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(42, 49, 50);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arrow {
+  flex-shrink: 0;
+  font-size: 18px;
+  color: rgb(42, 49, 50);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1199.98px) {
+  .contactSection {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .contactSection {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .label p,
+  .value p {
+    font-size: 14px;
+  }
+}

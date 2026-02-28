@@ -2,6 +2,8 @@ import HeroCarousel, { Slide } from '@/components/HeroCarousel';
 import IntroSection from '@/components/IntroSection';
 import FeaturedSection from '@/components/FeaturedSection';
 import ProjectGrid, { Project } from '@/components/ProjectGrid';
+import FAQSection from '@/components/FAQSection';
+import ContactSection from '@/components/ContactSection';
 
 const slides: Slide[] = [
   {
@@ -75,6 +77,57 @@ const projects: Project[] = [
   },
 ];
 
+const faqs = [
+  {
+    question: '¿Cuál es su proceso de diseño típico?',
+    answer:
+      'Nuestro proceso comienza con una consulta inicial para entender sus necesidades y visión. Luego desarrollamos conceptos preliminares, refinamos el diseño con su retroalimentación, y finalmente creamos documentación detallada para la construcción.',
+  },
+  {
+    question: '¿Cuánto tiempo suele tomar un proyecto?',
+    answer:
+      'El tiempo varía según la escala y complejidad del proyecto. Un proyecto residencial típico puede tomar de 6 a 12 meses desde el concepto inicial hasta la finalización de la construcción.',
+  },
+  {
+    question: '¿También manejan el desarrollo?',
+    answer:
+      'Sí, trabajamos con una red de constructores y artesanos de confianza. Supervisamos todo el proceso de construcción para asegurar que el diseño se ejecute según los más altos estándares.',
+  },
+  {
+    question: '¿Pueden ayudarnos con nuestro pitch deck?',
+    answer:
+      'Absolutamente. Ofrecemos servicios de visualización arquitectónica y presentaciones profesionales que comunican efectivamente su visión a inversionistas y stakeholders.',
+  },
+  {
+    question: '¿Cómo empezamos?',
+    answer:
+      'Simplemente contáctenos a través de nuestro formulario o por teléfono para agendar una consulta inicial. Discutiremos su proyecto, cronograma y presupuesto para determinar los mejores próximos pasos.',
+  },
+];
+
+const contactLinks = [
+  {
+    label: 'Email',
+    value: 'hola@yoloana.com',
+    href: 'mailto:hola@yoloana.com',
+  },
+  {
+    label: 'LinkedIn',
+    value: 'linkedin.com/yoloana',
+    href: 'https://linkedin.com/company/yoloana',
+  },
+  {
+    label: 'Linktree',
+    value: 'linktr.ee/yoloana',
+    href: 'https://linktr.ee/yoloana',
+  },
+  {
+    label: 'Website',
+    value: 'yoloana.com',
+    href: 'https://yoloana.com',
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -120,6 +173,10 @@ export default function Home() {
           text: 'Descubre nuestro método',
         }}
       />
+
+      <FAQSection faqs={faqs} />
+
+      <ContactSection links={contactLinks} />
     </main>
   );
 }
