@@ -1,0 +1,133 @@
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+  background-color: var(--color-bg);
+}
+
+.section.reverse {
+  direction: rtl;
+}
+
+.section.reverse > * {
+  direction: ltr;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  gap: var(--spacing-md);
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.tagline {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  opacity: 0.6;
+  margin: 0;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text);
+  margin: 0;
+  max-width: 500px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  opacity: 0.8;
+  margin: 0;
+  max-width: 480px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  width: fit-content;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-text);
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+.arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.link:hover .arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1199.98px) {
+  .content {
+    padding: var(--spacing-md);
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .section,
+  .section.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .imageWrapper {
+    min-height: 400px;
+  }
+
+  .content {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .tagline {
+    font-size: 12px;
+  }
+}
