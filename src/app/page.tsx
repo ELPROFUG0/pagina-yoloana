@@ -2,6 +2,7 @@ import HeroCarousel, { Slide } from '@/components/HeroCarousel';
 import IntroSection from '@/components/IntroSection';
 import FeaturedSection from '@/components/FeaturedSection';
 import ProjectGrid, { Project } from '@/components/ProjectGrid';
+import ProfileSection from '@/components/ProfileSection';
 import FAQSection from '@/components/FAQSection';
 import ContactSection from '@/components/ContactSection';
 
@@ -172,6 +173,11 @@ export default function Home() {
           href: '/metodo',
           text: 'Descubre nuestro método',
         }}
+      />
+
+      <ProfileSection
+        image="/images/yolo.png"
+        description="Arquitecta mexicana especializada en diseño holístico. Formada con Jacqueline Santiago, fusiono sabiduría ancestral y arquitectura consciente para crear espacios que nutren el alma. Creo en el poder del Feng Shui Clásico para reconectar con el equilibrio profundo de nuestros entornos. Un honor acompañarte en este viaje hacia la armonía."
       />
 
       <FAQSection faqs={faqs} />
