@@ -5,8 +5,10 @@ import FeaturedSection from '@/components/FeaturedSection';
 import ProjectGrid, { Project, Brand } from '@/components/ProjectGrid';
 import ProfileSection from '@/components/ProfileSection';
 import FAQSection from '@/components/FAQSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
+import styles from '@/components/TestimonialsSection.module.css';
 
 const slides: Slide[] = [
   {
@@ -132,6 +134,39 @@ const blogPosts = [
   },
 ];
 
+const testimonials = [
+  {
+    id: '1',
+    text: (
+      <>
+        Trabajar con YOLOANA <span className={styles.highlight}>transformó completamente mi hogar</span>. Profesionalismo excepcional y resultados impecables.
+      </>
+    ),
+    name: 'María González',
+    company: 'Cliente Residencial',
+  },
+  {
+    id: '2',
+    text: (
+      <>
+        <span className={styles.highlight}>El equilibrio perfecto entre funcionalidad y diseño</span>. Superaron todas nuestras expectativas.
+      </>
+    ),
+    name: 'Carlos Ramírez',
+    company: 'Proyecto Comercial',
+  },
+  {
+    id: '3',
+    text: (
+      <>
+        Una experiencia única. <span className={styles.highlight}>La sensibilidad y atención al detalle son excepcionales</span>.
+      </>
+    ),
+    name: 'Ana Martínez',
+    company: 'Renovación Integral',
+  },
+];
+
 const contactLinks = [
   {
     label: 'Email',
@@ -220,6 +255,8 @@ export default function Home() {
       />
 
       <FAQSection faqs={faqs} image="/images/holistica.jpg" />
+
+      <TestimonialsSection testimonials={testimonials} />
 
       <BlogSection posts={blogPosts} />
 
