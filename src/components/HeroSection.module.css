@@ -263,6 +263,33 @@
   height: 16px;
 }
 
+.menuButton {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  z-index: 3;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.3s ease;
+}
+
+.menuButton:hover {
+  transform: scale(1.1);
+}
+
+.menuButton span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: rgb(245, 242, 238);
+  transition: all 0.3s ease;
+}
+
 @media (max-width: 809.98px) {
   .mainWrapper {
     min-height: 50vh;

@@ -1,7 +1,9 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import MenuModal from './MenuModal';
 import styles from './HeroSection.module.css';
 
 interface HeroSectionProps {
@@ -19,9 +21,14 @@ export default function HeroSection({
   buttonLink,
   image,
 }: HeroSectionProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <section className={styles.section}>
-      <div className={styles.container}>
+    <>
+      <MenuModal isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+
+      <section className={styles.section}>
+        <div className={styles.container}>
         <div className={styles.heroImage}>
           <div className={styles.imageWrapper}>
             <Image
@@ -33,6 +40,17 @@ export default function HeroSection({
               sizes="100vw"
             />
             <div className={styles.overlay}></div>
+
+            {/* Menu Button */}
+            <button
+              className={styles.menuButton}
+              onClick={() => setIsMenuOpen(true)}
+              aria-label="Open menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
 
             <div className={styles.bottomLeftContent}>
               <div className={styles.headingStack}>
@@ -51,5 +69,6 @@ export default function HeroSection({
         </div>
       </div>
     </section>
+    </>
   );
 }
