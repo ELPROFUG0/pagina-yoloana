@@ -17,10 +17,11 @@ export default function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const scrollingUp = currentScrollY < lastScrollY;
-      const pastHero = currentScrollY > 600;
+      const pastHero = currentScrollY > 200;
+      const nearTop = currentScrollY < 100;
 
-      // Mostrar header solo si: estamos scrolleando hacia arriba Y hemos pasado el hero
-      setIsVisible(scrollingUp && pastHero);
+      // Mostrar header solo si: estamos scrolleando hacia arriba Y hemos pasado un poco Y NO estamos muy cerca del top
+      setIsVisible(scrollingUp && pastHero && !nearTop);
       setLastScrollY(currentScrollY);
     };
 
