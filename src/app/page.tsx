@@ -1,7 +1,7 @@
 import HeroCarousel, { Slide } from '@/components/HeroCarousel';
 import IntroSection from '@/components/IntroSection';
 import FeaturedSection from '@/components/FeaturedSection';
-import ProjectGrid, { Project } from '@/components/ProjectGrid';
+import ProjectGrid, { Project, Brand } from '@/components/ProjectGrid';
 import ProfileSection from '@/components/ProfileSection';
 import FAQSection from '@/components/FAQSection';
 import ContactSection from '@/components/ContactSection';
@@ -75,6 +75,39 @@ const projects: Project[] = [
     category: 'Interiorismo',
     image: '/images/project-6.jpg',
     href: '/proyectos/loft-industrial',
+  },
+];
+
+const brands: Brand[] = [
+  {
+    name: 'Marca 1',
+    logo: 'https://framerusercontent.com/images/rS1qYXMXwHsXXEoBkpWgE06wN4U.svg',
+    width: 188,
+    height: 48,
+  },
+  {
+    name: 'Marca 2',
+    logo: 'https://framerusercontent.com/images/H2wXOYXRTXqbDD6nOfOUiMJ5LM.svg',
+    width: 219,
+    height: 48,
+  },
+  {
+    name: 'Marca 3',
+    logo: 'https://framerusercontent.com/images/UqGYwrmovtTKkqW7eYK3rFNmLA0.svg',
+    width: 145,
+    height: 48,
+  },
+  {
+    name: 'Marca 4',
+    logo: 'https://framerusercontent.com/images/aUqibLN8aNJI9vZgAVttSMVQlA.svg',
+    width: 177,
+    height: 48,
+  },
+  {
+    name: 'Marca 5',
+    logo: 'https://framerusercontent.com/images/H0KKUTpHfFG6WGbKSRSsycow5o.svg',
+    width: 221,
+    height: 48,
   },
 ];
 
@@ -160,6 +193,7 @@ export default function Home() {
         title="Proyectos Destacados"
         description="Una selección de nuestros trabajos más recientes en arquitectura residencial, comercial e interiorismo."
         projects={projects}
+        brands={brands}
       />
 
       <FeaturedSection

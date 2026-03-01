@@ -1,0 +1,61 @@
+.carouselContainer {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0;
+  margin-top: 24px;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 2%,
+    rgb(0, 0, 0) 15%,
+    rgb(0, 0, 0) 85%,
+    rgba(0, 0, 0, 0) 98%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 2%,
+    rgb(0, 0, 0) 15%,
+    rgb(0, 0, 0) 85%,
+    rgba(0, 0, 0, 0) 98%
+  );
+}
+
+.carousel {
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  will-change: transform;
+}
+
+.item {
+  flex-shrink: 0;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.logoWrapper:hover {
+  opacity: 0.9;
+}
+
+.logoWrapper img {
+  max-height: 100%;
+  width: auto;
+}
+
+@media (max-width: 809.98px) {
+  .logoWrapper {
+    height: 24px;
+  }
+
+  .carousel {
+    gap: 24px;
+  }
+}
