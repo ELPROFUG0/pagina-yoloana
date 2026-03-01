@@ -1,3 +1,4 @@
+import HeroSection from '@/components/HeroSection';
 import HeroCarousel, { Slide } from '@/components/HeroCarousel';
 import IntroSection from '@/components/IntroSection';
 import FeaturedSection from '@/components/FeaturedSection';
@@ -165,7 +166,12 @@ const contactLinks = [
 export default function Home() {
   return (
     <main>
-      <HeroCarousel slides={slides} />
+      <HeroSection
+        title="Espacios que Transforman Vidas"
+        buttonText="Conoce más"
+        buttonLink="/contacto"
+        image="/images/slide-2.jpg"
+      />
 
       <IntroSection
         title="Presentamos YOLOANA Estudio"
