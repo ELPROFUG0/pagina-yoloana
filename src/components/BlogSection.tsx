@@ -32,14 +32,6 @@ export default function BlogSection({
           <div className={styles.leftColumn}>
             <div>
               <div className={styles.headerContent}>
-                <div className={styles.iconWrapper}>
-                  <svg className={styles.icon} role="presentation" viewBox="0 0 24 24">
-                    <path
-                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
                 <h2 className={styles.sectionTitle}>Blog</h2>
               </div>
               <h3 className={styles.title}>{title}</h3>
@@ -69,12 +61,15 @@ export default function BlogSection({
               </div>
               <div className={styles.buttonImageContainer}>
                 <div className={styles.buttonImageWrapper}>
-                  <Image
-                    src="/images/holistica.jpg"
-                    alt="Blog"
-                    fill
-                    className={styles.buttonImage}
-                  />
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      src="/images/holistica.jpg"
+                      alt="Blog"
+                      fill
+                      className={styles.buttonImage}
+                    />
+                    <div className={styles.imageMask}></div>
+                  </div>
                 </div>
               </div>
             </Link>
