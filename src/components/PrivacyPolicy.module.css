@@ -1,0 +1,222 @@
+.main {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(245, 242, 238);
+}
+
+.introSection {
+  padding: 80px var(--spacing-xl) 60px var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.introStack {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.mainTitle {
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.2;
+  flex: 1;
+}
+
+.effectiveDateStack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.effectiveDateLabel {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(95, 101, 102);
+  margin: 0;
+}
+
+.effectiveDate {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(42, 49, 50);
+  margin: 0;
+}
+
+.divider {
+  height: 1px;
+  background-color: rgba(134, 126, 111, 0.6);
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 40px var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionContent {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.2;
+  flex-shrink: 0;
+  width: 280px;
+}
+
+.spacer {
+  flex-shrink: 0;
+  width: 0;
+}
+
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subsectionTitle {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(95, 101, 102);
+  margin: 0;
+}
+
+.text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgb(42, 49, 50);
+  margin: 0;
+  font-weight: 400;
+}
+
+.text ul {
+  margin: 0;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.text ul li {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgb(42, 49, 50);
+  font-weight: 400;
+}
+
+.link {
+  color: rgb(255, 89, 0);
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 1199.98px) {
+  .introSection {
+    padding: var(--spacing-xl) var(--spacing-md) 40px var(--spacing-md);
+  }
+
+  .section {
+    padding: 40px var(--spacing-md);
+  }
+
+  .mainTitle {
+    font-size: 40px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+    width: 240px;
+  }
+
+  .sectionContent {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .introSection {
+    padding: var(--spacing-lg) var(--spacing-sm) 30px var(--spacing-sm);
+  }
+
+  .section {
+    padding: 30px var(--spacing-sm);
+  }
+
+  .introStack {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mainTitle {
+    font-size: 32px;
+  }
+
+  .sectionContent {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .contentWrapper {
+    gap: 20px;
+  }
+
+  .text p,
+  .text ul li {
+    font-size: 16px;
+  }
+
+  .effectiveDateLabel,
+  .effectiveDate {
+    font-size: 14px;
+  }
+
+  .subsectionTitle {
+    font-size: 14px;
+  }
+}

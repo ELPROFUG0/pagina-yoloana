@@ -79,7 +79,7 @@ export default function Footer() {
             </form>
             <p className={styles.privacy}>
               Al suscribirte aceptas nuestra{' '}
-              <Link href="/privacidad" className={styles.privacyLink}>
+              <Link href="/politica-privacidad" className={styles.privacyLink}>
                 política de privacidad
               </Link>
               .
@@ -90,7 +90,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className={styles.bottom}>
           <div className={styles.bottomLine}></div>
-          <Link href="/privacidad" className={styles.linkWithLine}>
+          <Link href="/politica-privacidad" className={styles.linkWithLine}>
             <span>Política de Privacidad</span>
             <div className={styles.underline}></div>
           </Link>
