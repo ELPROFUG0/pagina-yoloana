@@ -5,6 +5,7 @@ import FeaturedSection from '@/components/FeaturedSection';
 import ProjectGrid, { Project, Brand } from '@/components/ProjectGrid';
 import ProfileSection from '@/components/ProfileSection';
 import FAQSection from '@/components/FAQSection';
+import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 
 const slides: Slide[] = [
@@ -119,6 +120,18 @@ const faqs = [
   },
 ];
 
+const blogPosts = [
+  {
+    id: '1',
+    title: 'Diseñando Espacios de Calma en un Mundo Acelerado',
+    description: 'Cómo el diseño interior intencional puede crear equilibrio, claridad y una sensación de calma en la vida cotidiana.',
+    date: 'Abril 18, 2024',
+    readTime: '1 Minute',
+    image: '/images/holistica.jpg',
+    href: '/blog/espacios-de-calma',
+  },
+];
+
 const contactLinks = [
   {
     label: 'Email',
@@ -207,6 +220,8 @@ export default function Home() {
       />
 
       <FAQSection faqs={faqs} image="/images/holistica.jpg" />
+
+      <BlogSection posts={blogPosts} />
 
       <ContactSection links={contactLinks} image="/images/yolo.png" />
     </main>

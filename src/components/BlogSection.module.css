@@ -1,0 +1,371 @@
+.blogSection {
+  padding: 80px var(--spacing-xl) 100px var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: stretch;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 100%;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.iconWrapper {
+  background-color: rgb(240, 240, 240);
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-text);
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 16px;
+  color: rgb(54, 54, 54);
+  opacity: 0.8;
+  margin: 0;
+}
+
+.allArticlesButton {
+  background-color: rgb(232, 230, 230);
+  border-radius: 32px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.allArticlesButton:hover {
+  transform: translateY(-4px);
+}
+
+.allArticlesButton:hover .buttonArrow svg {
+  transform: scale(0.8);
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.buttonTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.buttonTitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.buttonDescription {
+  font-size: 14px;
+  color: rgb(54, 54, 54);
+  margin: 0;
+}
+
+.buttonArrow {
+  background-color: rgb(250, 250, 250);
+  border-radius: 14px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.buttonArrow svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-text);
+  transition: transform 0.3s ease;
+}
+
+.buttonImageContainer {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 0 0 32px 32px;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.buttonImageWrapper {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.buttonImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  object-position: center center;
+}
+
+.rightColumn {
+  position: relative;
+}
+
+.postCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 100%;
+  min-height: 600px;
+}
+
+.postCard:hover {
+  transform: translateY(-8px);
+}
+
+.postCard:hover .arrow svg {
+  transform: scale(0.8);
+}
+
+.imageWrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.postImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageMask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.badges {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.dateBadge {
+  background-color: rgb(250, 250, 250);
+  border-radius: 48px;
+  padding: 8px 16px;
+}
+
+.dateBadge p {
+  font-size: 14px;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.readTimeBadge {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 48px;
+  padding: 8px 16px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 12px 0px inset;
+}
+
+.readTimeBadge p {
+  font-size: 14px;
+  color: rgb(250, 250, 250);
+  margin: 0;
+}
+
+.postContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.postTitle {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(250, 250, 250);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.postDescription {
+  font-size: 15px;
+  color: rgb(217, 217, 217);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.viewAction {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.viewButton {
+  background-color: rgb(250, 250, 250);
+  border-radius: 28px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.viewButton span {
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.arrow {
+  background-color: rgb(250, 250, 250);
+  border-radius: 14px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.arrow svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-text);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 1199.98px) {
+  .blogSection {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .blogSection {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .allArticlesButton {
+    display: none;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .postCard {
+    min-height: 500px;
+  }
+
+  .postTitle {
+    font-size: 20px;
+  }
+
+  .badges {
+    top: 16px;
+    left: 16px;
+    right: 16px;
+  }
+
+  .postContent {
+    padding: 20px;
+  }
+}
