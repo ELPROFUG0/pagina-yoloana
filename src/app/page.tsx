@@ -7,6 +7,7 @@ import FAQSection from '@/components/FAQSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
+import ScrollReveal from '@/components/ScrollReveal';
 import testimonialsStyles from '@/components/TestimonialsSection.module.css';
 import profileStyles from '@/components/ProfileSection.module.css';
 
@@ -209,39 +210,53 @@ export default function Home() {
         image="/images/loto.jpg"
       />
 
-      <IntroSection
-        title="Presentamos Loto Blanco"
-        paragraphs={[
-          'Arraigado en las tradiciones de la arquitectura contemporánea, Loto Blanco nace de un profundo respeto por la artesanía y los materiales atemporales. Honramos el patrimonio arquitectónico combinando técnicas probadas con simplicidad moderna.',
-          'Cada proyecto que creamos lleva el espíritu de la elegancia discreta: una elegancia subestimada que se encuentra en el equilibrio de forma, función y naturaleza. Nuestra misión es crear espacios que inviten a la calma, la reflexión y la presencia duradera en la vida cotidiana.',
-        ]}
-        buttonText="Descubre nuestro estudio"
-        buttonLink="/estudio"
-      />
+      <ScrollReveal>
+        <IntroSection
+          title="Presentamos Loto Blanco"
+          paragraphs={[
+            'Arraigado en las tradiciones de la arquitectura contemporánea, Loto Blanco nace de un profundo respeto por la artesanía y los materiales atemporales. Honramos el patrimonio arquitectónico combinando técnicas probadas con simplicidad moderna.',
+            'Cada proyecto que creamos lleva el espíritu de la elegancia discreta: una elegancia subestimada que se encuentra en el equilibrio de forma, función y naturaleza. Nuestra misión es crear espacios que inviten a la calma, la reflexión y la presencia duradera en la vida cotidiana.',
+          ]}
+          buttonText="Descubre nuestro estudio"
+          buttonLink="/estudio"
+        />
+      </ScrollReveal>
 
-      <ProjectGrid
-        title="Proyectos Destacados"
-        description="Una selección de nuestros trabajos más recientes en arquitectura residencial, comercial e interiorismo."
-        projects={projects}
-        brands={brands}
-      />
+      <ScrollReveal delay={100}>
+        <ProjectGrid
+          title="Proyectos Destacados"
+          description="Una selección de nuestros trabajos más recientes en arquitectura residencial, comercial e interiorismo."
+          projects={projects}
+          brands={brands}
+        />
+      </ScrollReveal>
 
-      <ProfileSection
-        image="/images/yolo.png"
-        description={
-          <>
-            Arquitecta mexicana con profunda pasión por el mundo sutil. Formada en <span className={profileStyles.highlight}>arquitectura holística</span> con Jacqueline Santiago, pionera en este enfoque. Mi vocación es acompañar a las personas a habitar plenamente sus espacios, integrando <span className={profileStyles.highlight}>sabiduría ancestral</span> y <span className={profileStyles.highlight}>diseño consciente</span>. Aunque el <span className={profileStyles.highlight}>Feng Shui Clásico</span> ha sido desplazado por prácticas modernas, sigo creyendo en su poder para reconectar con el equilibrio profundo. Especializada en <span className={profileStyles.highlight}>interiorismo</span>, <span className={profileStyles.highlight}>consultoría</span> y <span className={profileStyles.highlight}>diseño bioclimático</span> para crear <span className={profileStyles.highlight}>espacios armónicos</span>. Es un honor caminar contigo en este viaje.
-          </>
-        }
-      />
+      <ScrollReveal delay={100}>
+        <ProfileSection
+          image="/images/yolo.png"
+          description={
+            <>
+              Arquitecta mexicana con profunda pasión por el mundo sutil. Formada en <span className={profileStyles.highlight}>arquitectura holística</span> con Jacqueline Santiago, pionera en este enfoque. Mi vocación es acompañar a las personas a habitar plenamente sus espacios, integrando <span className={profileStyles.highlight}>sabiduría ancestral</span> y <span className={profileStyles.highlight}>diseño consciente</span>. Aunque el <span className={profileStyles.highlight}>Feng Shui Clásico</span> ha sido desplazado por prácticas modernas, sigo creyendo en su poder para reconectar con el equilibrio profundo. Especializada en <span className={profileStyles.highlight}>interiorismo</span>, <span className={profileStyles.highlight}>consultoría</span> y <span className={profileStyles.highlight}>diseño bioclimático</span> para crear <span className={profileStyles.highlight}>espacios armónicos</span>. Es un honor caminar contigo en este viaje.
+            </>
+          }
+        />
+      </ScrollReveal>
 
-      <FAQSection faqs={faqs} image="/images/holistica.jpg" />
+      <ScrollReveal delay={100}>
+        <FAQSection faqs={faqs} image="/images/holistica.jpg" />
+      </ScrollReveal>
 
-      <TestimonialsSection testimonials={testimonials} />
+      <ScrollReveal delay={100}>
+        <TestimonialsSection testimonials={testimonials} />
+      </ScrollReveal>
 
-      <BlogSection posts={blogPosts} />
+      <ScrollReveal delay={100}>
+        <BlogSection posts={blogPosts} />
+      </ScrollReveal>
 
-      <ContactSection links={contactLinks} image="/images/yolo.png" />
+      <ScrollReveal delay={100}>
+        <ContactSection links={contactLinks} image="/images/yolo.png" />
+      </ScrollReveal>
     </main>
   );
 }
