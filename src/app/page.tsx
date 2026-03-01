@@ -177,7 +177,17 @@ export default function Home() {
 
       <ProfileSection
         image="/images/yolo.png"
-        description="Arquitecta mexicana especializada en diseño holístico. Formada con Jacqueline Santiago, fusiono sabiduría ancestral y arquitectura consciente para crear espacios que nutren el alma. Creo en el poder del Feng Shui Clásico para reconectar con el equilibrio profundo de nuestros entornos. Un honor acompañarte en este viaje hacia la armonía."
+        description="Arquitecta mexicana con profunda pasión por el mundo sutil. Formada en arquitectura holística con Jacqueline Santiago, pionera en este enfoque. Mi vocación es acompañar a las personas a habitar plenamente sus espacios, integrando sabiduría ancestral y diseño consciente. Aunque el Feng Shui Clásico ha sido desplazado por prácticas modernas, sigo creyendo en su poder para reconectar con el equilibrio profundo. Es un honor caminar contigo en este viaje."
+        badges={[
+          { text: 'Arquitectura Holística', rotation: -4 },
+          { text: 'Feng Shui Clásico', rotation: 9 },
+          { text: 'Diseño Consciente', rotation: -15 },
+          { text: 'Sabiduría Ancestral', rotation: 7 },
+          { text: 'Espacios Armónicos', rotation: -10 },
+          { text: 'Interiorismo', rotation: -9 },
+          { text: 'Consultoría', rotation: -7 },
+          { text: 'Diseño Bioclimático', rotation: 3 },
+        ]}
       />
 
       <FAQSection faqs={faqs} />

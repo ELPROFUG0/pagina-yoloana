@@ -3,16 +3,21 @@
 import Image from 'next/image';
 import styles from './ProfileSection.module.css';
 
+interface Badge {
+  text: string;
+  rotation: number;
+}
+
 interface ProfileSectionProps {
   image: string;
-  caption?: string;
-  description: string;
+  description?: string;
+  badges?: Badge[];
 }
 
 export default function ProfileSection({
   image,
-  caption = 'Hola, soy yo :)',
   description,
+  badges = [],
 }: ProfileSectionProps) {
   return (
     <section className={styles.profileSection}>
@@ -26,18 +31,28 @@ export default function ProfileSection({
               height={400}
               className={styles.image}
             />
-            <div className={styles.caption}>
-              <div className={styles.captionBubble}>
-                <p>{caption}</p>
+          </div>
+
+          <div className={styles.badgesWrapper}>
+            {badges.map((badge, index) => (
+              <div
+                key={index}
+                className={styles.badge}
+                style={{
+                  '--rotation': `${badge.rotation}deg`,
+                } as React.CSSProperties}
+              >
+                <p>{badge.text}</p>
               </div>
-              <div className={styles.arrow}>↗</div>
-            </div>
+            ))}
           </div>
         </div>
 
-        <div className={styles.descriptionWrapper}>
-          <p className={styles.description}>{description}</p>
-        </div>
+        {description && (
+          <div className={styles.mobileDescription}>
+            <p>{description}</p>
+          </div>
+        )}
       </div>
     </section>
   );
