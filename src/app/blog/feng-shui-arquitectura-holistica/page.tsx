@@ -145,6 +145,15 @@ export default function FengShuiPost() {
     </>
   );
 
+  const relatedPosts = [
+    {
+      id: 'arquitectura-bioclimatica-2026',
+      title: 'Arquitectura Bioclimática 2026: El Futuro del Diseño Sustentable',
+      image: '/images/blog/bioclimatica-hero.jpg',
+      date: '28 de Febrero, 2026',
+    },
+  ];
+
   return (
     <BlogPost
       title="Feng Shui en la Arquitectura Holística: Creando Espacios de Bienestar"
@@ -153,6 +162,7 @@ export default function FengShuiPost() {
       readTime="8 min lectura"
       image="/images/blog/feng-shui-hero.jpg"
       content={content}
+      relatedPosts={relatedPosts}
     />
   );
 }

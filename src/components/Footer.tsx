@@ -56,6 +56,10 @@ export default function Footer() {
               <span>Método</span>
               <div className={styles.underline}></div>
             </Link>
+            <Link href="/blog" className={styles.linkWithLine}>
+              <span>Blog</span>
+              <div className={styles.underline}></div>
+            </Link>
             <Link href="/contacto" className={styles.linkWithLine}>
               <span>Contacto</span>
               <div className={styles.underline}></div>

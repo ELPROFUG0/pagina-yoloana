@@ -9,6 +9,15 @@ export const metadata = {
 
 const blogPosts = [
   {
+    id: 'arquitectura-bioclimatica-2026',
+    title: 'Arquitectura Bioclimática 2026: El Futuro del Diseño Sustentable',
+    excerpt: 'Explora las tendencias más innovadoras en arquitectura bioclimática y cómo están transformando el diseño sustentable. Materiales inteligentes, tecnología invisible y naturaleza como infraestructura.',
+    image: '/images/blog/bioclimatica-hero.jpg',
+    date: '28 de Febrero, 2026',
+    readTime: '10 min lectura',
+    category: 'Sustentabilidad',
+  },
+  {
     id: 'feng-shui-arquitectura-holistica',
     title: 'Feng Shui en la Arquitectura Holística: Creando Espacios de Bienestar',
     excerpt: 'Descubre cómo los principios milenarios del Feng Shui se integran con la arquitectura moderna para crear espacios que nutren el cuerpo, la mente y el espíritu.',

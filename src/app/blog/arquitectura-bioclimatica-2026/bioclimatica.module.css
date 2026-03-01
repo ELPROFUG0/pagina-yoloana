@@ -1,0 +1,49 @@
+.imageContainer {
+  margin: 48px 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sources {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(51, 48, 42, 0.1);
+}
+
+.sources h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  color: var(--color-text);
+}
+
+.sources ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sources li {
+  margin: 0;
+}
+
+.sources a {
+  font-size: 15px;
+  color: rgb(95, 101, 102);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.sources a:hover {
+  color: rgb(255, 89, 0);
+}
+
+.sources a::before {
+  content: "→ ";
+  margin-right: 8px;
+  color: rgb(255, 89, 0);
+}
