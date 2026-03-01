@@ -42,23 +42,23 @@ const projects: Project[] = [
   {
     id: '1',
     title: 'Mizu Storage Chest',
-    category: 'Furniture',
+    category: 'Muebles',
     image: '/images/project-1.jpg',
-    href: '/objects/mizu-storage-chest',
+    href: '/proyectos/mizu-storage-chest',
   },
   {
     id: '2',
     title: 'Sora Pendant Lamp',
-    category: 'Lighting',
+    category: 'Iluminación',
     image: '/images/project-2.jpg',
-    href: '/objects/sora-pendant-lamp',
+    href: '/proyectos/sora-pendant-lamp',
   },
   {
     id: '3',
     title: 'Hibi Cabinet',
-    category: 'Furniture',
+    category: 'Muebles',
     image: '/images/project-3.jpg',
-    href: '/objects/hibi-cabinet',
+    href: '/proyectos/hibi-cabinet',
   },
 ];
 

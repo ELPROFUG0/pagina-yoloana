@@ -1,0 +1,252 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navButton {
+  flex-shrink: 0;
+  background-color: rgba(245, 242, 238, 0.9);
+  border: 1px solid rgba(149, 92, 41, 0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.navButton:hover {
+  background-color: rgba(245, 242, 238, 1);
+  border-color: #955c29;
+  transform: scale(1.1);
+}
+
+.navButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.scrollContainer {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 8px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.imageItem {
+  position: relative;
+  flex-shrink: 0;
+  width: 200px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.imageItem:hover {
+  transform: scale(1.05);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalNavButton {
+  flex-shrink: 0;
+  background-color: rgba(245, 242, 238, 0.9);
+  border: 1px solid rgba(149, 92, 41, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10001;
+  backdrop-filter: blur(10px);
+}
+
+.modalNavMobile {
+  display: none;
+}
+
+.modalNavButton:hover {
+  background-color: rgba(245, 242, 238, 1);
+  border-color: #955c29;
+  transform: scale(1.1);
+}
+
+.modalContent {
+  position: relative;
+  max-width: 900px;
+  max-height: 90vh;
+  width: 100%;
+  animation: scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modalImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.modalImage {
+  object-fit: contain;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(245, 242, 238, 0.95);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10002;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.closeButton:hover {
+  background-color: rgba(245, 242, 238, 1);
+  transform: scale(1.1);
+}
+
+@media (max-width: 1199.98px) {
+  .imageItem {
+    width: 180px;
+    height: 135px;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .carousel {
+    gap: 12px;
+  }
+
+  .navButton {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .scrollContainer {
+    gap: 12px;
+  }
+
+  .imageItem {
+    width: 150px;
+    height: 112px;
+  }
+
+  .modal {
+    padding: 10px;
+    gap: 0;
+  }
+
+  .modalNavButton:not(.modalNavMobile) {
+    display: none;
+  }
+
+  .modalNavMobile {
+    display: flex;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    z-index: 10003;
+  }
+
+  .modalNavMobile.modalPrevButton {
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .modalNavMobile.modalNextButton {
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .modalContent {
+    max-width: 95%;
+    width: 95%;
+  }
+
+  .closeButton {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+  }
+}
