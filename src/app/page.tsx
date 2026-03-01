@@ -1,14 +1,14 @@
 import HeroSection from '@/components/HeroSection';
 import HeroCarousel, { Slide } from '@/components/HeroCarousel';
 import IntroSection from '@/components/IntroSection';
-import FeaturedSection from '@/components/FeaturedSection';
 import ProjectGrid, { Project, Brand } from '@/components/ProjectGrid';
 import ProfileSection from '@/components/ProfileSection';
 import FAQSection from '@/components/FAQSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
-import styles from '@/components/TestimonialsSection.module.css';
+import testimonialsStyles from '@/components/TestimonialsSection.module.css';
+import profileStyles from '@/components/ProfileSection.module.css';
 
 const slides: Slide[] = [
   {
@@ -139,7 +139,7 @@ const testimonials = [
     id: '1',
     text: (
       <>
-        Trabajar con YOLOANA <span className={styles.highlight}>transformó completamente mi hogar</span>. Profesionalismo excepcional y resultados impecables.
+        Trabajar con YOLOANA <span className={testimonialsStyles.highlight}>transformó completamente mi hogar</span>. Profesionalismo excepcional y resultados impecables.
       </>
     ),
     name: 'María González',
@@ -149,7 +149,7 @@ const testimonials = [
     id: '2',
     text: (
       <>
-        <span className={styles.highlight}>El equilibrio perfecto entre funcionalidad y diseño</span>. Superaron todas nuestras expectativas.
+        <span className={testimonialsStyles.highlight}>El equilibrio perfecto entre funcionalidad y diseño</span>. Superaron todas nuestras expectativas.
       </>
     ),
     name: 'Carlos Ramírez',
@@ -159,7 +159,7 @@ const testimonials = [
     id: '3',
     text: (
       <>
-        Una experiencia única. <span className={styles.highlight}>La sensibilidad y atención al detalle son excepcionales</span>.
+        Una experiencia única. <span className={testimonialsStyles.highlight}>La sensibilidad y atención al detalle son excepcionales</span>.
       </>
     ),
     name: 'Ana Martínez',
@@ -226,32 +226,13 @@ export default function Home() {
         brands={brands}
       />
 
-      <FeaturedSection
-        tagline="Nuestro proceso"
-        title="Del concepto a la realidad"
-        description="Trabajamos de cerca con cada cliente para entender sus necesidades y aspiraciones. Nuestro proceso combina creatividad, precisión técnica y atención meticulosa al detalle en cada fase del proyecto."
-        image="/images/featured-2.jpg"
-        imageAlt="Proceso de diseño arquitectónico"
-        reverse
-        link={{
-          href: '/metodo',
-          text: 'Descubre nuestro método',
-        }}
-      />
-
       <ProfileSection
         image="/images/yolo.png"
-        description="Arquitecta mexicana con profunda pasión por el mundo sutil. Formada en arquitectura holística con Jacqueline Santiago, pionera en este enfoque. Mi vocación es acompañar a las personas a habitar plenamente sus espacios, integrando sabiduría ancestral y diseño consciente. Aunque el Feng Shui Clásico ha sido desplazado por prácticas modernas, sigo creyendo en su poder para reconectar con el equilibrio profundo. Es un honor caminar contigo en este viaje."
-        badges={[
-          { text: 'Arquitectura Holística', rotation: -4 },
-          { text: 'Feng Shui Clásico', rotation: 9 },
-          { text: 'Diseño Consciente', rotation: -15 },
-          { text: 'Sabiduría Ancestral', rotation: 7 },
-          { text: 'Espacios Armónicos', rotation: -10 },
-          { text: 'Interiorismo', rotation: -9 },
-          { text: 'Consultoría', rotation: -7 },
-          { text: 'Diseño Bioclimático', rotation: 3 },
-        ]}
+        description={
+          <>
+            Arquitecta mexicana con profunda pasión por el mundo sutil. Formada en <span className={profileStyles.highlight}>arquitectura holística</span> con Jacqueline Santiago, pionera en este enfoque. Mi vocación es acompañar a las personas a habitar plenamente sus espacios, integrando <span className={profileStyles.highlight}>sabiduría ancestral</span> y <span className={profileStyles.highlight}>diseño consciente</span>. Aunque el <span className={profileStyles.highlight}>Feng Shui Clásico</span> ha sido desplazado por prácticas modernas, sigo creyendo en su poder para reconectar con el equilibrio profundo. Especializada en <span className={profileStyles.highlight}>interiorismo</span>, <span className={profileStyles.highlight}>consultoría</span> y <span className={profileStyles.highlight}>diseño bioclimático</span> para crear <span className={profileStyles.highlight}>espacios armónicos</span>. Es un honor caminar contigo en este viaje.
+          </>
+        }
       />
 
       <FAQSection faqs={faqs} image="/images/holistica.jpg" />
