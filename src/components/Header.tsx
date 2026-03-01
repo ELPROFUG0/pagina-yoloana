@@ -3,11 +3,13 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import MenuModal from './MenuModal';
 import styles from './Header.module.css';
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === '/';
 
@@ -40,46 +42,60 @@ export default function Header() {
   };
 
   return (
-    <header className={`${styles.header} ${isVisible ? styles.visible : ''}`}>
-      <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
-          Loto Blanco
-        </Link>
+    <>
+      <MenuModal isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
 
-        <nav className={styles.nav}>
-          <Link
-            href="/#proyectos"
-            className={styles.link}
-            onClick={(e) => handleSectionClick(e, 'proyectos')}
+      <header className={`${styles.header} ${isVisible ? styles.visible : ''}`}>
+        <div className={styles.container}>
+          <Link href="/" className={styles.logo}>
+            Loto Blanco
+          </Link>
+
+          <nav className={styles.nav}>
+            <Link
+              href="/#proyectos"
+              className={styles.link}
+              onClick={(e) => handleSectionClick(e, 'proyectos')}
+            >
+              Proyectos
+            </Link>
+            <Link
+              href="/#estudio"
+              className={styles.link}
+              onClick={(e) => handleSectionClick(e, 'estudio')}
+            >
+              Estudio
+            </Link>
+            <Link
+              href="/#faqs"
+              className={styles.link}
+              onClick={(e) => handleSectionClick(e, 'faqs')}
+            >
+              FAQs
+            </Link>
+            <Link href="/blog" className={styles.link}>
+              Blog
+            </Link>
+            <Link
+              href="/#contacto"
+              className={styles.link}
+              onClick={(e) => handleSectionClick(e, 'contacto')}
+            >
+              Contacto
+            </Link>
+          </nav>
+
+          <button
+            className={styles.menuButton}
+            onClick={() => setIsMenuOpen(true)}
+            aria-label="Open menu"
           >
-            Proyectos
-          </Link>
-          <Link
-            href="/#estudio"
-            className={styles.link}
-            onClick={(e) => handleSectionClick(e, 'estudio')}
-          >
-            Estudio
-          </Link>
-          <Link
-            href="/#faqs"
-            className={styles.link}
-            onClick={(e) => handleSectionClick(e, 'faqs')}
-          >
-            FAQs
-          </Link>
-          <Link href="/blog" className={styles.link}>
-            Blog
-          </Link>
-          <Link
-            href="/#contacto"
-            className={styles.link}
-            onClick={(e) => handleSectionClick(e, 'contacto')}
-          >
-            Contacto
-          </Link>
-        </nav>
-      </div>
-    </header>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+    </>
   );
 }

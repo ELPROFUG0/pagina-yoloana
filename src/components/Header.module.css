@@ -65,6 +65,29 @@
   width: 100%;
 }
 
+.menuButton {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 10;
+}
+
+.menuButton span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text);
+  transition: all 0.3s ease;
+}
+
+.menuButton:hover span {
+  background-color: rgba(51, 48, 42, 0.6);
+}
+
 @media (max-width: 1199.98px) {
   .container {
     padding: 20px 40px;
@@ -85,10 +108,10 @@
   }
 
   .nav {
-    gap: 20px;
+    display: none;
   }
 
-  .link {
-    font-size: 14px;
+  .menuButton {
+    display: flex;
   }
 }

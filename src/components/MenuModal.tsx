@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import styles from './MenuModal.module.css';
 
 interface MenuModalProps {
@@ -10,6 +11,22 @@ interface MenuModalProps {
 }
 
 export default function MenuModal({ isOpen, onClose }: MenuModalProps) {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
+  const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    if (isHomePage) {
+      e.preventDefault();
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        onClose();
+      }
+    } else {
+      onClose();
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -48,23 +65,40 @@ export default function MenuModal({ isOpen, onClose }: MenuModalProps) {
             </div>
 
             <nav className={styles.navigation}>
-              <Link href="/" className={styles.navLink} onClick={onClose}>
-                Home
+              <Link
+                href="/#proyectos"
+                className={styles.navLink}
+                onClick={(e) => handleSectionClick(e, 'proyectos')}
+              >
+                Proyectos
               </Link>
-              <Link href="/estudio" className={styles.navLink} onClick={onClose}>
-                Studio
+              <Link
+                href="/#estudio"
+                className={styles.navLink}
+                onClick={(e) => handleSectionClick(e, 'estudio')}
+              >
+                Estudio
               </Link>
-              <Link href="/proyectos" className={styles.navLink} onClick={onClose}>
-                Projects
+              <Link
+                href="/#faqs"
+                className={styles.navLink}
+                onClick={(e) => handleSectionClick(e, 'faqs')}
+              >
+                FAQs
               </Link>
-              <Link href="/metodo" className={styles.navLink} onClick={onClose}>
-                Method
+              <Link
+                href="/blog"
+                className={styles.navLink}
+                onClick={onClose}
+              >
+                Blog
               </Link>
-              <Link href="/objects" className={styles.navLink} onClick={onClose}>
-                Objects
-              </Link>
-              <Link href="/contacto" className={styles.navLink} onClick={onClose}>
-                Contact
+              <Link
+                href="/#contacto"
+                className={styles.navLink}
+                onClick={(e) => handleSectionClick(e, 'contacto')}
+              >
+                Contacto
               </Link>
             </nav>
           </div>
