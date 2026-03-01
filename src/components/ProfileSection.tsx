@@ -23,6 +23,11 @@ export default function ProfileSection({
               fill
               className={styles.image}
             />
+            <div className={styles.tooltip}>
+              <div className={styles.tooltipContent}>
+                <p>Hola, Soy yo :)</p>
+              </div>
+            </div>
           </div>
         </div>
 
