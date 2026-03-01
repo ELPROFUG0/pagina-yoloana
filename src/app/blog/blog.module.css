@@ -4,7 +4,7 @@
 }
 
 .header {
-  padding: 120px var(--spacing-xl) 80px var(--spacing-xl);
+  padding: 40px var(--spacing-xl) 60px var(--spacing-xl);
   max-width: 1200px;
   margin: 0 auto;
   border-bottom: 1px solid rgba(51, 48, 42, 0.1);
