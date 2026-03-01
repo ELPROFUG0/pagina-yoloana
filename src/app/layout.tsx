@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SmoothScroll from '@/components/SmoothScroll';
 import '@/styles/globals.css';
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="es">
       <body>
         <SmoothScroll />
+        <Header />
         {children}
         <Footer />
       </body>

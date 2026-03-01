@@ -223,27 +223,33 @@ export default function Home() {
       </ScrollReveal>
 
       <ScrollReveal delay={100}>
-        <ProjectGrid
-          title="Proyectos Destacados"
-          description="Una selección de nuestros trabajos más recientes en arquitectura residencial, comercial e interiorismo."
-          projects={projects}
-          brands={brands}
-        />
+        <div id="proyectos">
+          <ProjectGrid
+            title="Proyectos Destacados"
+            description="Una selección de nuestros trabajos más recientes en arquitectura residencial, comercial e interiorismo."
+            projects={projects}
+            brands={brands}
+          />
+        </div>
       </ScrollReveal>
 
       <ScrollReveal delay={100}>
-        <ProfileSection
-          image="/images/yolo.png"
-          description={
-            <>
-              Arquitecta mexicana con profunda pasión por el mundo sutil. Formada en <span className={profileStyles.highlight}>arquitectura holística</span> con Jacqueline Santiago, pionera en este enfoque. Mi vocación es acompañar a las personas a habitar plenamente sus espacios, integrando <span className={profileStyles.highlight}>sabiduría ancestral</span> y <span className={profileStyles.highlight}>diseño consciente</span>. Aunque el <span className={profileStyles.highlight}>Feng Shui Clásico</span> ha sido desplazado por prácticas modernas, sigo creyendo en su poder para reconectar con el equilibrio profundo. Especializada en <span className={profileStyles.highlight}>interiorismo</span>, <span className={profileStyles.highlight}>consultoría</span> y <span className={profileStyles.highlight}>diseño bioclimático</span> para crear <span className={profileStyles.highlight}>espacios armónicos</span>. Es un honor caminar contigo en este viaje.
-            </>
-          }
-        />
+        <div id="estudio">
+          <ProfileSection
+            image="/images/yolo.png"
+            description={
+              <>
+                Arquitecta mexicana con profunda pasión por el mundo sutil. Formada en <span className={profileStyles.highlight}>arquitectura holística</span> con Jacqueline Santiago, pionera en este enfoque. Mi vocación es acompañar a las personas a habitar plenamente sus espacios, integrando <span className={profileStyles.highlight}>sabiduría ancestral</span> y <span className={profileStyles.highlight}>diseño consciente</span>. Aunque el <span className={profileStyles.highlight}>Feng Shui Clásico</span> ha sido desplazado por prácticas modernas, sigo creyendo en su poder para reconectar con el equilibrio profundo. Especializada en <span className={profileStyles.highlight}>interiorismo</span>, <span className={profileStyles.highlight}>consultoría</span> y <span className={profileStyles.highlight}>diseño bioclimático</span> para crear <span className={profileStyles.highlight}>espacios armónicos</span>. Es un honor caminar contigo en este viaje.
+              </>
+            }
+          />
+        </div>
       </ScrollReveal>
 
       <ScrollReveal delay={100}>
-        <FAQSection faqs={faqs} image="/images/holistica.jpg" />
+        <div id="faqs">
+          <FAQSection faqs={faqs} image="/images/holistica.jpg" />
+        </div>
       </ScrollReveal>
 
       <ScrollReveal delay={100}>
@@ -255,7 +261,9 @@ export default function Home() {
       </ScrollReveal>
 
       <ScrollReveal delay={100}>
-        <ContactSection links={contactLinks} image="/images/yolo.png" />
+        <div id="contacto">
+          <ContactSection links={contactLinks} image="/images/yolo.png" />
+        </div>
       </ScrollReveal>
     </main>
   );
