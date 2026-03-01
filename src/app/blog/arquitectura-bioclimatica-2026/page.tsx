@@ -233,6 +233,12 @@ export default function BioclimaticaPost() {
 
   const relatedPosts = [
     {
+      id: 'que-es-arquitectura-holistica',
+      title: '¿Qué es la Arquitectura Holística? Diseño Integral para el Bienestar',
+      image: '/images/blog/holistica-hero.jpg',
+      date: '27 de Febrero, 2026',
+    },
+    {
       id: 'feng-shui-arquitectura-holistica',
       title: 'Feng Shui en la Arquitectura Holística: Creando Espacios de Bienestar',
       image: '/images/blog/feng-shui-hero.jpg',

@@ -9,6 +9,15 @@ export const metadata = {
 
 const blogPosts = [
   {
+    id: 'feng-shui-arquitectura-holistica',
+    title: 'Feng Shui en la Arquitectura Holística: Creando Espacios de Bienestar',
+    excerpt: 'Descubre cómo los principios milenarios del Feng Shui se integran con la arquitectura moderna para crear espacios que nutren el cuerpo, la mente y el espíritu.',
+    image: '/images/blog/feng-shui-hero.jpg',
+    date: '1 de Marzo, 2026',
+    readTime: '8 min lectura',
+    category: 'Diseño Holístico',
+  },
+  {
     id: 'arquitectura-bioclimatica-2026',
     title: 'Arquitectura Bioclimática 2026: El Futuro del Diseño Sustentable',
     excerpt: 'Explora las tendencias más innovadoras en arquitectura bioclimática y cómo están transformando el diseño sustentable. Materiales inteligentes, tecnología invisible y naturaleza como infraestructura.',
@@ -18,13 +27,13 @@ const blogPosts = [
     category: 'Sustentabilidad',
   },
   {
-    id: 'feng-shui-arquitectura-holistica',
-    title: 'Feng Shui en la Arquitectura Holística: Creando Espacios de Bienestar',
-    excerpt: 'Descubre cómo los principios milenarios del Feng Shui se integran con la arquitectura moderna para crear espacios que nutren el cuerpo, la mente y el espíritu.',
-    image: '/images/blog/feng-shui-hero.jpg',
-    date: '1 de Marzo, 2026',
-    readTime: '8 min lectura',
-    category: 'Diseño Holístico',
+    id: 'que-es-arquitectura-holistica',
+    title: '¿Qué es la Arquitectura Holística? Diseño Integral para el Bienestar',
+    excerpt: 'Comprende los fundamentos de la arquitectura holística y cómo integra las cuatro dimensiones del ser humano: física, emocional, mental y espiritual en el diseño de espacios.',
+    image: '/images/blog/holistica-hero.jpg',
+    date: '27 de Febrero, 2026',
+    readTime: '12 min lectura',
+    category: 'Fundamentos',
   },
 ];
 
