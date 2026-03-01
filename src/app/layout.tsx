@@ -3,8 +3,8 @@ import Footer from '@/components/Footer';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
-  title: 'YOLOANA Arquitectura',
-  description: 'Estudio de arquitectura contemporánea',
+  title: 'Loto Blanco | Arquitectura Holística',
+  description: 'Estudio de arquitectura holística',
 };
 
 export default function RootLayout({

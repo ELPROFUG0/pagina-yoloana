@@ -1,7 +1,7 @@
 .section {
   position: relative;
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(245, 242, 238);
   overflow: hidden;
 }
 
@@ -286,7 +286,7 @@
   display: block;
   width: 28px;
   height: 2px;
-  background-color: rgb(245, 242, 238);
+  background-color: rgb(42, 42, 42);
   transition: all 0.3s ease;
 }
 

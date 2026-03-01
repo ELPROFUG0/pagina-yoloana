@@ -38,7 +38,7 @@ export default function MenuModal({ isOpen, onClose }: MenuModalProps) {
           </button>
 
           <div className={styles.content}>
-            <div className={styles.logo}>YOLOANA</div>
+            <div className={styles.logo}>LOTO BLANCO</div>
 
             <div className={styles.contactInfo}>
               <p className={styles.contactLabel}>Contact</p>
@@ -78,7 +78,7 @@ export default function MenuModal({ isOpen, onClose }: MenuModalProps) {
                 Linktree
               </a>
             </div>
-            <p className={styles.copyright}>© 2026 YOLOANA</p>
+            <p className={styles.copyright}>© 2026 Loto Blanco</p>
           </div>
         </div>
       </div>

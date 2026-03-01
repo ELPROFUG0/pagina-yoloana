@@ -219,7 +219,7 @@ export default function PrivacyPolicy() {
             <p>Si tiene preguntas sobre esta Política de Privacidad o nuestras prácticas de manejo de datos, contáctenos en:</p>
             <p><a href="mailto:hola@yoloana.com" className={styles.link}>hola@yoloana.com</a></p>
             <p><a href="tel:+52-123-456-7890" className={styles.link}>+52 123 456 7890</a></p>
-            <p>YOLOANA Studio, México</p>
+            <p>Loto Blanco, México</p>
           </div>
         </div>
       </section>

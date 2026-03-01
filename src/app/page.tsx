@@ -23,7 +23,7 @@ const slides: Slide[] = [
     image: '/images/slide-2.jpg',
     tagline: 'Arquitectura contemporánea',
     title: 'Un estudio con profundas raíces',
-    description: 'YOLOANA comenzó como una forma de preservar los valores del oficio, la familia y la forma. Continúa de la misma manera hoy.',
+    description: 'Loto Blanco comenzó como una forma de preservar los valores del oficio, la familia y la forma. Continúa de la misma manera hoy.',
     buttonText: 'Conoce nuestra historia',
     buttonLink: '/estudio',
   },
@@ -139,7 +139,7 @@ const testimonials = [
     id: '1',
     text: (
       <>
-        Trabajar con YOLOANA <span className={testimonialsStyles.highlight}>transformó completamente mi hogar</span>. Profesionalismo excepcional y resultados impecables.
+        Trabajar con Loto Blanco <span className={testimonialsStyles.highlight}>transformó completamente mi hogar</span>. Profesionalismo excepcional y resultados impecables.
       </>
     ),
     name: 'María González',
@@ -206,13 +206,13 @@ export default function Home() {
         title="Espacios que Transforman Vidas"
         buttonText="Conoce más"
         buttonLink="/contacto"
-        image="/images/slide-2.jpg"
+        image="/images/loto.jpg"
       />
 
       <IntroSection
-        title="Presentamos YOLOANA Estudio"
+        title="Presentamos Loto Blanco"
         paragraphs={[
-          'Arraigado en las tradiciones de la arquitectura contemporánea, YOLOANA nace de un profundo respeto por la artesanía y los materiales atemporales. Honramos el patrimonio arquitectónico combinando técnicas probadas con simplicidad moderna.',
+          'Arraigado en las tradiciones de la arquitectura contemporánea, Loto Blanco nace de un profundo respeto por la artesanía y los materiales atemporales. Honramos el patrimonio arquitectónico combinando técnicas probadas con simplicidad moderna.',
           'Cada proyecto que creamos lleva el espíritu de la elegancia discreta: una elegancia subestimada que se encuentra en el equilibrio de forma, función y naturaleza. Nuestra misión es crear espacios que inviten a la calma, la reflexión y la presencia duradera en la vida cotidiana.',
         ]}
         buttonText="Descubre nuestro estudio"

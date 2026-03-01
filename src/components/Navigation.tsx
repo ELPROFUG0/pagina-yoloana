@@ -59,7 +59,7 @@ export default function Navigation() {
   return (
     <nav className={`${styles.nav} ${isVisible ? styles.visible : styles.hidden} ${isAtTop ? styles.transparent : styles.solid} ${animateLinks ? styles.animate : ''}`}>
       <div className={styles.logo}>
-        <Link href="/">YOLOANA</Link>
+        <Link href="/">LOTO BLANCO</Link>
       </div>
 
       <div className={styles.links}>
