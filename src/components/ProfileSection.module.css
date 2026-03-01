@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 60px;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .imageColumn {
@@ -48,6 +48,35 @@
   background: linear-gradient(90deg, rgba(255, 89, 0, 0.08) 100%, transparent 100%) 0px 100% / 100% 100% no-repeat;
   color: rgb(255, 89, 0);
   font-weight: 500;
+}
+
+.founderInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 20px;
+}
+
+.founderName {
+  margin: 0;
+}
+
+.founderName p {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(42, 49, 50);
+  margin: 0;
+}
+
+.founderTitle {
+  margin: 0;
+}
+
+.founderTitle p {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(95, 101, 102);
+  margin: 0;
 }
 
 @media (max-width: 1199.98px) {

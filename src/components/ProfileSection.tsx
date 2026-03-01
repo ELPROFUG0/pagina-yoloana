@@ -30,6 +30,15 @@ export default function ProfileSection({
           <div className={styles.descriptionText}>
             {description}
           </div>
+
+          <div className={styles.founderInfo}>
+            <div className={styles.founderName}>
+              <p>Yoloana Pichardo</p>
+            </div>
+            <div className={styles.founderTitle}>
+              <p>Fundadora & Arquitecta</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
