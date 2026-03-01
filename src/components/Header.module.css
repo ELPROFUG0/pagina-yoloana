@@ -18,18 +18,21 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 80px;
+  padding: 4px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--color-text);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: -0.02em;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
 }
 
 .nav {
@@ -100,11 +103,12 @@
 
 @media (max-width: 809.98px) {
   .container {
-    padding: 16px 20px;
+    padding: 4px 20px;
   }
 
-  .logo {
-    font-size: 18px;
+  .logo img {
+    width: 160px;
+    height: auto;
   }
 
   .nav {

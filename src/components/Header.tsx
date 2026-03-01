@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import MenuModal from './MenuModal';
 import styles from './Header.module.css';
@@ -49,7 +50,13 @@ export default function Header() {
       <header className={`${styles.header} ${isVisible ? styles.visible : ''}`}>
         <div className={styles.container}>
           <Link href="/" className={styles.logo}>
-            Loto Blanco
+            <Image
+              src="/images/Loto%20blanco.svg"
+              alt="Loto Blanco"
+              width={220}
+              height={60}
+              priority
+            />
           </Link>
 
           <nav className={styles.nav}>

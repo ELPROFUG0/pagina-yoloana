@@ -126,12 +126,12 @@ const faqs = [
 const blogPosts = [
   {
     id: '1',
-    title: 'Diseñando Espacios de Calma en un Mundo Acelerado',
-    description: 'Cómo el diseño interior intencional puede crear equilibrio, claridad y una sensación de calma en la vida cotidiana.',
-    date: 'Abril 18, 2024',
-    readTime: '1 Minute',
-    image: '/images/holistica.jpg',
-    href: '/blog/espacios-de-calma',
+    title: '¿Qué es la Arquitectura Holística?',
+    description: 'Integra cuerpo, mente y espíritu para crear espacios que nutren tu bienestar.',
+    date: '27 de Febrero, 2026',
+    readTime: '12 min lectura',
+    image: '/images/blog/holistica-hero.jpg',
+    href: '/blog/que-es-arquitectura-holistica',
   },
 ];
 

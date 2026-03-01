@@ -7,6 +7,9 @@ import '@/styles/globals.css';
 export const metadata: Metadata = {
   title: 'Loto Blanco | Arquitectura Holística',
   description: 'Estudio de arquitectura holística',
+  icons: {
+    icon: '/images/favicon.svg',
+  },
 };
 
 export default function RootLayout({

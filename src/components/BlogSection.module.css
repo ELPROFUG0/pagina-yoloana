@@ -229,11 +229,12 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 60%;
+  height: 70%;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.75) 30%,
+    rgba(0, 0, 0, 0.4) 60%,
     transparent 100%
   );
   z-index: 1;
