@@ -1,6 +1,7 @@
 .section {
   padding: 120px var(--spacing-xl);
   background-color: var(--color-bg);
+  border-top: 1px solid rgba(51, 48, 42, 0.1);
 }
 
 .headerWrapper {
@@ -49,10 +50,23 @@
   max-width: 500px;
 }
 
-.grid {
+.objectsContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-md);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.objectItem {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 1;
+}
+
+.objectItemTall {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 .card {
@@ -68,12 +82,22 @@
   transform: translateY(-8px);
 }
 
-.imageWrapper {
+.imageContainer {
+  position: relative;
+  width: 100%;
+  opacity: 1;
+}
+
+.imageInner {
   position: relative;
   width: 100%;
   padding-bottom: 125%;
   overflow: hidden;
   background-color: rgba(51, 48, 42, 0.05);
+}
+
+.objectItemTall .imageInner {
+  padding-bottom: 140%;
 }
 
 .overlay {

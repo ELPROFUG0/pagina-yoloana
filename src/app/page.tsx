@@ -37,45 +37,24 @@ const slides: Slide[] = [
 const projects: Project[] = [
   {
     id: '1',
-    title: 'Casa Mediterránea',
-    category: 'Residencial',
+    title: 'Mizu Storage Chest',
+    category: 'Furniture',
     image: '/images/project-1.jpg',
-    href: '/proyectos/casa-mediterranea',
+    href: '/objects/mizu-storage-chest',
   },
   {
     id: '2',
-    title: 'Estudio Urbano',
-    category: 'Comercial',
+    title: 'Sora Pendant Lamp',
+    category: 'Lighting',
     image: '/images/project-2.jpg',
-    href: '/proyectos/estudio-urbano',
+    href: '/objects/sora-pendant-lamp',
   },
   {
     id: '3',
-    title: 'Villa Contemporánea',
-    category: 'Residencial',
+    title: 'Hibi Cabinet',
+    category: 'Furniture',
     image: '/images/project-3.jpg',
-    href: '/proyectos/villa-contemporanea',
-  },
-  {
-    id: '4',
-    title: 'Espacio Minimalista',
-    category: 'Interiorismo',
-    image: '/images/project-4.jpg',
-    href: '/proyectos/espacio-minimalista',
-  },
-  {
-    id: '5',
-    title: 'Casa de Campo',
-    category: 'Residencial',
-    image: '/images/project-5.jpg',
-    href: '/proyectos/casa-campo',
-  },
-  {
-    id: '6',
-    title: 'Loft Industrial',
-    category: 'Interiorismo',
-    image: '/images/project-6.jpg',
-    href: '/proyectos/loft-industrial',
+    href: '/objects/hibi-cabinet',
   },
 ];
 
@@ -181,18 +160,6 @@ export default function Home() {
         ]}
         buttonText="Descubre nuestro estudio"
         buttonLink="/estudio"
-      />
-
-      <FeaturedSection
-        tagline="Nuestra filosofía"
-        title="Diseño que respeta el entorno"
-        description="Cada proyecto nace del diálogo entre el espacio, la luz y los materiales. Creamos arquitectura que honra su contexto, integrándose naturalmente en el paisaje mientras define su propia identidad."
-        image="/images/featured-1.jpg"
-        imageAlt="Arquitectura integrada en el entorno"
-        link={{
-          href: '/estudio',
-          text: 'Conoce más sobre nosotros',
-        }}
       />
 
       <ProjectGrid
