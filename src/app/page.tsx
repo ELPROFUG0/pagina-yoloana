@@ -124,16 +124,25 @@ const contactLinks = [
     label: 'Email',
     value: 'hola@yoloana.com',
     href: 'mailto:hola@yoloana.com',
+    icon: '/images/Mail-Featured-image.png',
   },
   {
     label: 'LinkedIn',
     value: 'linkedin.com/yoloana',
     href: 'https://linkedin.com/company/yoloana',
+    icon: '/images/text-to-png-630ca410-5675-45ac-8015-1f1dc15b7d48.png',
   },
   {
     label: 'Linktree',
     value: 'linktr.ee/yoloana',
     href: 'https://linktr.ee/yoloana',
+    icon: '/images/linktree.webp',
+  },
+  {
+    label: 'Nuestros productos',
+    value: 'Ver catálogo',
+    href: '/productos',
+    icon: '/images/shopify.png',
   },
   {
     label: 'Website',
@@ -199,7 +208,7 @@ export default function Home() {
 
       <FAQSection faqs={faqs} />
 
-      <ContactSection links={contactLinks} />
+      <ContactSection links={contactLinks} image="/images/yolo.png" />
     </main>
   );
 }
