@@ -206,7 +206,7 @@ export default function Home() {
         ]}
       />
 
-      <FAQSection faqs={faqs} />
+      <FAQSection faqs={faqs} image="/images/holistica.jpg" />
 
       <ContactSection links={contactLinks} image="/images/yolo.png" />
     </main>
