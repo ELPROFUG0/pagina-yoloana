@@ -98,7 +98,7 @@
 }
 
 .content a {
-  color: rgb(255, 89, 0);
+  color: #955c29;
   text-decoration: underline;
   transition: opacity 0.3s ease;
 }
@@ -108,7 +108,7 @@
 }
 
 .content blockquote {
-  border-left: 4px solid rgb(255, 89, 0);
+  border-left: 4px solid #955c29;
   padding-left: 24px;
   margin: 40px 0;
   font-style: italic;

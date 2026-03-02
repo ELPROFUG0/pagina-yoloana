@@ -142,7 +142,7 @@
 }
 
 .link {
-  color: rgb(255, 89, 0);
+  color: #955c29;
   text-decoration: underline;
   transition: opacity 0.3s ease;
 }
