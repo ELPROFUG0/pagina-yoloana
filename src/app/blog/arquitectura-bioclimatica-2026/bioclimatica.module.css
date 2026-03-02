@@ -39,11 +39,11 @@
 }
 
 .sources a:hover {
-  color: rgb(255, 89, 0);
+  color: #955c29;
 }
 
 .sources a::before {
   content: "→ ";
   margin-right: 8px;
-  color: rgb(255, 89, 0);
+  color: #955c29;
 }
