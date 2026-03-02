@@ -27,12 +27,12 @@ export default function Footer() {
             <p>España</p>
 
             <div className={styles.contactLinks}>
-              <a href="tel:+34912345678" className={styles.linkWithLine}>
-                <span>+34 912 345 678</span>
+              <a href="https://wa.me/525548873683" className={styles.linkWithLine}>
+                <span>+52 55 4887 3683</span>
                 <div className={styles.underline}></div>
               </a>
-              <a href="mailto:hola@yoloana.com" className={styles.linkWithLine}>
-                <span>hola@yoloana.com</span>
+              <a href="mailto:contacto@lotoblancoarq.com" className={styles.linkWithLine}>
+                <span>contacto@lotoblancoarq.com</span>
                 <div className={styles.underline}></div>
               </a>
             </div>

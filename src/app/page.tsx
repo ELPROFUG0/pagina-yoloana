@@ -171,20 +171,26 @@ const testimonials = [
 const contactLinks = [
   {
     label: 'Email',
-    value: 'hola@yoloana.com',
-    href: 'mailto:hola@yoloana.com',
+    value: 'contacto@lotoblancoarq.com',
+    href: 'mailto:contacto@lotoblancoarq.com',
     icon: '/images/Mail-Featured-image.png',
   },
   {
-    label: 'LinkedIn',
-    value: 'linkedin.com/yoloana',
-    href: 'https://linkedin.com/company/yoloana',
+    label: 'WhatsApp',
+    value: '+52 55 4887 3683',
+    href: 'https://wa.me/525548873683',
     icon: '/images/text-to-png-630ca410-5675-45ac-8015-1f1dc15b7d48.png',
   },
   {
+    label: 'Instagram',
+    value: '@loto_blanco_arq',
+    href: 'https://www.instagram.com/loto_blanco_arq',
+    icon: '/images/linktree.webp',
+  },
+  {
     label: 'Linktree',
-    value: 'linktr.ee/yoloana',
-    href: 'https://linktr.ee/yoloana',
+    value: 'linktr.ee/LotoBlanco.Arq',
+    href: 'https://linktr.ee/LotoBlanco.Arq',
     icon: '/images/linktree.webp',
   },
   {
@@ -192,11 +198,6 @@ const contactLinks = [
     value: 'Ver catálogo',
     href: '/productos',
     icon: '/images/shopify.png',
-  },
-  {
-    label: 'Website',
-    value: 'yoloana.com',
-    href: 'https://yoloana.com',
   },
 ];
 
