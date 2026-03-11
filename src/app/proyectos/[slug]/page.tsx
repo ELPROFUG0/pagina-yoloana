@@ -21,12 +21,12 @@ interface ProjectDetailData {
 }
 
 const projectsData: { [key: string]: ProjectDetailData } = {
-  'mizu-storage-chest': {
-    slug: 'mizu-storage-chest',
-    category: 'Muebles',
-    title: 'Mizu Storage Chest',
-    availability: 'Disponible',
-    description: 'Un cofre diseñado para la presencia tranquila. Mizu combina madera maciza con herrajes minimalistas, permitiendo que su entorno permanezca en foco. La forma se reduce a lo esencial, con cada detalle formado para servir el equilibrio entre funcionalidad y estética.',
+  'casa-piedra-viva': {
+    slug: 'casa-piedra-viva',
+    category: 'Residencial',
+    title: 'Casa Piedra Viva',
+    availability: 'Completado',
+    description: 'Una residencia contemporánea que fusiona piedra natural y madera para crear espacios de calidez y elegancia. El diseño aprovecha la iluminación natural a través de amplios ventanales, mientras que los acabados artesanales en piedra aportan textura y presencia. Los jardines circundantes integran la arquitectura con el paisaje.',
     mainImage: '/images/project-1.jpg',
     carouselImages: [
       '/images/project-1.jpg',
@@ -34,19 +34,18 @@ const projectsData: { [key: string]: ProjectDetailData } = {
       '/images/project-3.jpg',
     ],
     specs: {
-      edition: '120 piezas',
-      year: '2025',
-      dimensions: '120 cm × 45 cm × 80 cm',
-      materials: 'Madera de roble maciza, acabado a mano, herrajes de bronce',
-      production: 'Hecho en México',
+      year: '2024',
+      dimensions: '380 m² construidos',
+      materials: 'Piedra volcánica, madera de parota, cristal templado',
+      production: 'CDMX, México',
     },
   },
-  'sora-pendant-lamp': {
-    slug: 'sora-pendant-lamp',
-    category: 'Iluminación',
-    title: 'Sora Pendant Lamp',
-    availability: 'Disponible',
-    description: 'Una lámpara colgante diseñada para la presencia tranquila. Sora proyecta una luz suave y descendente, permitiendo que su entorno permanezca en foco. La forma se reduce a lo esencial, con cada detalle formado para servir el equilibrio entre metal y madera.',
+  'casa-entre-arboles': {
+    slug: 'casa-entre-arboles',
+    category: 'Arquitectura Bioclimática',
+    title: 'Casa Entre Árboles',
+    availability: 'Completado',
+    description: 'Un proyecto que respeta y se integra con la vegetación existente. La estructura escalonada permite que cada nivel tenga contacto directo con la naturaleza, mientras que las terrazas abiertas y los grandes cristales difuminan los límites entre interior y exterior. Diseño bioclimático que aprovecha la ventilación natural.',
     mainImage: '/images/project-2.jpg',
     carouselImages: [
       '/images/project-2.jpg',
@@ -54,19 +53,18 @@ const projectsData: { [key: string]: ProjectDetailData } = {
       '/images/project-3.jpg',
     ],
     specs: {
-      edition: '120 piezas',
-      year: '2025',
-      dimensions: 'Ø 28 cm × H 22 cm',
-      materials: 'Pantalla de aluminio cepillado, roble acabado a mano, cable cubierto de tela',
-      production: 'Hecho en México',
+      year: '2024',
+      dimensions: '290 m² construidos',
+      materials: 'Estructura metálica, cristal, madera certificada',
+      production: 'Valle de Bravo, México',
     },
   },
-  'hibi-cabinet': {
-    slug: 'hibi-cabinet',
-    category: 'Muebles',
-    title: 'Hibi Cabinet',
-    availability: 'Disponible',
-    description: 'Un gabinete minimalista que honra la tradición del diseño japonés. Hibi combina líneas limpias con artesanía excepcional, creando un mueble que se integra perfectamente en espacios contemporáneos mientras mantiene un profundo respeto por los materiales naturales.',
+  'espacio-artesanal': {
+    slug: 'espacio-artesanal',
+    category: 'Interiorismo',
+    title: 'Casa Luz Natural',
+    availability: 'Completado',
+    description: 'Un espacio donde la luz es protagonista. El tragaluz cenital inunda de claridad la estancia principal, mientras las puertas corredizas de cristal difuminan los límites entre interior y jardín. Pisos de madera cálida, cocina integrada con isla central y una paleta de tonos neutros que invitan a la calma.',
     mainImage: '/images/project-3.jpg',
     carouselImages: [
       '/images/project-3.jpg',
@@ -74,11 +72,10 @@ const projectsData: { [key: string]: ProjectDetailData } = {
       '/images/project-2.jpg',
     ],
     specs: {
-      edition: '80 piezas',
-      year: '2025',
-      dimensions: '90 cm × 40 cm × 120 cm',
-      materials: 'Nogal macizo, puertas corredizas de papel washi, acabado natural',
-      production: 'Hecho en México',
+      year: '2024',
+      dimensions: '220 m² de interiores',
+      materials: 'Madera de encino, cristal templado, mármol travertino',
+      production: 'CDMX, México',
     },
   },
 };
@@ -161,9 +158,6 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </div>
         </div>
 
-        <div className={styles.carouselSection}>
-          <ImageCarousel images={project.carouselImages} />
-        </div>
       </div>
     </main>
   );

@@ -1,11 +1,24 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Preloader from './Preloader';
 
+const PAGES_WITHOUT_PRELOADER = ['/servicios', '/blog'];
+
 export default function PageWrapper({ children }: { children: React.ReactNode }) {
-  const [showPreloader, setShowPreloader] = useState(true);
-  const [contentVisible, setContentVisible] = useState(false);
+  const pathname = usePathname();
+  const shouldShowPreloader = !PAGES_WITHOUT_PRELOADER.some(page => pathname.startsWith(page));
+
+  const [showPreloader, setShowPreloader] = useState(shouldShowPreloader);
+  const [contentVisible, setContentVisible] = useState(!shouldShowPreloader);
+
+  useEffect(() => {
+    if (!shouldShowPreloader) {
+      setShowPreloader(false);
+      setContentVisible(true);
+    }
+  }, [shouldShowPreloader]);
 
   return (
     <>

@@ -8,6 +8,7 @@ interface ContactLink {
   value: string;
   href: string;
   icon?: string;
+  disabled?: boolean;
 }
 
 interface ContactSectionProps {
@@ -59,7 +60,7 @@ export default function ContactSection({
                 <p className={styles.smallText}>¿Tienes una idea?</p>
                 <p className={styles.largeText}>Estamos listos para trabajar contigo.</p>
               </div>
-              <a href="/contacto" className={styles.bookButton}>
+              <a href="https://wa.me/525548873683" target="_blank" rel="noopener noreferrer" className={styles.bookButton}>
                 Agenda una reunión
               </a>
             </div>
@@ -69,23 +70,39 @@ export default function ContactSection({
         <div className={styles.contentWrapper}>
           <div className={styles.linkList}>
             {links.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.contactLink}
-              >
-                <div className={styles.label}>
-                  <p>{link.label}</p>
-                </div>
-                <div className={styles.valueWrapper}>
-                  <div className={styles.value}>
-                    <p>{link.value}</p>
+              link.disabled ? (
+                <div
+                  key={index}
+                  className={`${styles.contactLink} ${styles.disabled}`}
+                >
+                  <div className={styles.label}>
+                    <p>{link.label}</p>
                   </div>
-                  <div className={styles.arrow}>→</div>
+                  <div className={styles.valueWrapper}>
+                    <div className={styles.value}>
+                      <p>{link.value}</p>
+                    </div>
+                  </div>
                 </div>
-              </a>
+              ) : (
+                <a
+                  key={index}
+                  href={link.href}
+                  target={link.href.startsWith('/') ? '_self' : '_blank'}
+                  rel="noopener noreferrer"
+                  className={styles.contactLink}
+                >
+                  <div className={styles.label}>
+                    <p>{link.label}</p>
+                  </div>
+                  <div className={styles.valueWrapper}>
+                    <div className={styles.value}>
+                      <p>{link.value}</p>
+                    </div>
+                    <div className={styles.arrow}>→</div>
+                  </div>
+                </a>
+              )
             ))}
           </div>
         </div>

@@ -54,12 +54,12 @@ export default function HeroSection({
 
             <div className={styles.bottomLeftContent}>
               <div className={styles.headingStack}>
-                <p className={styles.subtitle}>Everyday pieces, considered</p>
-                <h2 className={styles.secondaryTitle}>Objects for thoughtful living</h2>
+                <p className={styles.subtitle}>Arquitectura holística</p>
+                <h2 className={styles.secondaryTitle}>Espacios con alma</h2>
               </div>
-              <p className={styles.description}>Each object is made in small numbers, shaped to serve daily life without excess.</p>
-              <Link href="/objects" className={styles.discoverButton}>
-                <span>Discover Our Objects</span>
+              <p className={styles.description}>Diseño consciente que integra naturaleza, luz y bienestar.</p>
+              <Link href="/#proyectos" className={styles.discoverButton}>
+                <span>Ver Proyectos</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>

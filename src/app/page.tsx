@@ -42,24 +42,24 @@ const slides: Slide[] = [
 const projects: Project[] = [
   {
     id: '1',
-    title: 'Mizu Storage Chest',
-    category: 'Muebles',
+    title: 'Casa Piedra Viva',
+    category: 'Residencial',
     image: '/images/project-1.jpg',
-    href: '/proyectos/mizu-storage-chest',
+    href: '/proyectos/casa-piedra-viva',
   },
   {
     id: '2',
-    title: 'Sora Pendant Lamp',
-    category: 'Iluminación',
+    title: 'Casa Entre Árboles',
+    category: 'Arquitectura Bioclimática',
     image: '/images/project-2.jpg',
-    href: '/proyectos/sora-pendant-lamp',
+    href: '/proyectos/casa-entre-arboles',
   },
   {
     id: '3',
-    title: 'Hibi Cabinet',
-    category: 'Muebles',
+    title: 'Casa Luz Natural',
+    category: 'Interiorismo',
     image: '/images/project-3.jpg',
-    href: '/proyectos/hibi-cabinet',
+    href: '/proyectos/espacio-artesanal',
   },
 ];
 
@@ -198,10 +198,15 @@ const contactLinks = [
     icon: '/images/linktree.webp',
   },
   {
+    label: 'Servicios Extras',
+    value: 'Purificación, Feng Shui y más',
+    href: '/servicios',
+  },
+  {
     label: 'Nuestros productos',
-    value: 'Ver catálogo',
-    href: '/productos',
-    icon: '/images/shopify.png',
+    value: 'Próximamente',
+    href: '#',
+    disabled: true,
   },
 ];
 

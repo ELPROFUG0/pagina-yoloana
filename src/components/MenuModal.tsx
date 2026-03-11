@@ -73,6 +73,13 @@ export default function MenuModal({ isOpen, onClose }: MenuModalProps) {
                 Proyectos
               </Link>
               <Link
+                href="/servicios"
+                className={styles.navLink}
+                onClick={onClose}
+              >
+                Servicios
+              </Link>
+              <Link
                 href="/#estudio"
                 className={styles.navLink}
                 onClick={(e) => handleSectionClick(e, 'estudio')}

@@ -22,9 +22,8 @@ export default function Footer() {
         <div className={styles.grid}>
           {/* Address Section */}
           <div className={styles.address}>
-            <p>Calle de la Arquitectura 123</p>
-            <p>Madrid, 28001</p>
-            <p>España</p>
+            <p>Ciudad de México</p>
+            <p>CDMX, México</p>
 
             <div className={styles.contactLinks}>
               <a href="https://wa.me/525548873683" className={styles.linkWithLine}>
