@@ -8,6 +8,7 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 import ScrollReveal from '@/components/ScrollReveal';
+import GrabovoiNumbers from '@/components/GrabovoiNumbers';
 import testimonialsStyles from '@/components/TestimonialsSection.module.css';
 import profileStyles from '@/components/ProfileSection.module.css';
 
@@ -245,6 +246,10 @@ export default function Home() {
             }
           />
         </div>
+      </ScrollReveal>
+
+      <ScrollReveal delay={100}>
+        <GrabovoiNumbers />
       </ScrollReveal>
 
       <ScrollReveal delay={100}>
