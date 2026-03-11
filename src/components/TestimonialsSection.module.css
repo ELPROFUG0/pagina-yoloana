@@ -79,12 +79,14 @@
 }
 
 .profileImage {
+  position: relative;
   width: 48px;
   height: 48px;
   border-radius: 50%;
   background-color: rgb(220, 220, 220);
   flex-shrink: 0;
   align-self: flex-start;
+  overflow: hidden;
 }
 
 .nameCompany {

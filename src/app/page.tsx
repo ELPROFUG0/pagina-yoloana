@@ -144,8 +144,9 @@ const testimonials = [
         Trabajar con Loto Blanco <span className={testimonialsStyles.highlight}>transformó completamente mi hogar</span>. Profesionalismo excepcional y resultados impecables.
       </>
     ),
-    name: 'María González',
+    name: 'Moises Medrano',
     company: 'Cliente Residencial',
+    image: '/images/testimonial-1.jpg',
   },
   {
     id: '2',
@@ -156,6 +157,7 @@ const testimonials = [
     ),
     name: 'Carlos Ramírez',
     company: 'Proyecto Comercial',
+    image: '/images/testimonial-2.jpg',
   },
   {
     id: '3',
@@ -166,6 +168,7 @@ const testimonials = [
     ),
     name: 'Ana Martínez',
     company: 'Renovación Integral',
+    image: '/images/testimonial-3.jpg',
   },
 ];
 

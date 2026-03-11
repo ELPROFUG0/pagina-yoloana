@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import styles from './TestimonialsSection.module.css';
 
 interface Testimonial {
@@ -7,6 +8,7 @@ interface Testimonial {
   text: React.ReactNode;
   name: string;
   company: string;
+  image?: string;
 }
 
 interface TestimonialsSectionProps {
@@ -31,7 +33,16 @@ export default function TestimonialsSection({ testimonials }: TestimonialsSectio
                 <p className={styles.testimonialText}>{testimonial.text}</p>
               </div>
               <div className={styles.imageNameCompany}>
-                <div className={styles.profileImage}></div>
+                <div className={styles.profileImage}>
+                  {testimonial.image && (
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                    />
+                  )}
+                </div>
                 <div className={styles.nameCompany}>
                   <p className={styles.clientName}>{testimonial.name}</p>
                   <p className={styles.clientCompany}>{testimonial.company}</p>
