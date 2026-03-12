@@ -232,16 +232,14 @@ export default function Home() {
         />
       </ScrollReveal>
 
-      <ScrollReveal delay={100}>
-        <div id="proyectos">
-          <ProjectGrid
-            title="Proyectos Destacados"
-            description="Una selección de nuestros trabajos más recientes en arquitectura residencial, comercial e interiorismo."
-            projects={projects}
-            brands={brands}
-          />
-        </div>
-      </ScrollReveal>
+      <div id="proyectos">
+        <ProjectGrid
+          title="Proyectos Destacados"
+          description="Una selección de nuestros trabajos más recientes en arquitectura residencial, comercial e interiorismo."
+          projects={projects}
+          brands={brands}
+        />
+      </div>
 
       <ScrollReveal delay={100}>
         <div id="estudio">
