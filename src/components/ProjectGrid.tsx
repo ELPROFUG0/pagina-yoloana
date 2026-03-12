@@ -61,6 +61,7 @@ export default function ProjectGrid({ title, description, projects, brands }: Pr
                     fill
                     style={{ objectFit: 'cover' }}
                     sizes="(max-width: 809px) 100vw, 33vw"
+                    loading="eager"
                   />
                 </div>
               </div>
@@ -84,6 +85,7 @@ export default function ProjectGrid({ title, description, projects, brands }: Pr
                     fill
                     style={{ objectFit: 'cover' }}
                     sizes="(max-width: 809px) 100vw, 33vw"
+                    loading="eager"
                   />
                 </div>
               </div>
