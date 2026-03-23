@@ -65,33 +65,33 @@ const projects: Project[] = [
 
 const brands: Brand[] = [
   {
-    name: 'Marca 1',
+    name: 'DoTerra',
     logo: 'https://framerusercontent.com/images/rS1qYXMXwHsXXEoBkpWgE06wN4U.svg',
     width: 188,
     height: 48,
   },
   {
-    name: 'Marca 2',
+    name: 'VenuStudio',
     logo: 'https://framerusercontent.com/images/H2wXOYXRTXqbDD6nOfOUiMJ5LM.svg',
     width: 219,
     height: 48,
   },
   {
-    name: 'Marca 3',
-    logo: 'https://framerusercontent.com/images/UqGYwrmovtTKkqW7eYK3rFNmLA0.svg',
-    width: 145,
+    name: 'DoTerra',
+    logo: 'https://framerusercontent.com/images/rS1qYXMXwHsXXEoBkpWgE06wN4U.svg',
+    width: 188,
     height: 48,
   },
   {
-    name: 'Marca 4',
-    logo: 'https://framerusercontent.com/images/aUqibLN8aNJI9vZgAVttSMVQlA.svg',
-    width: 177,
+    name: 'VenuStudio',
+    logo: 'https://framerusercontent.com/images/H2wXOYXRTXqbDD6nOfOUiMJ5LM.svg',
+    width: 219,
     height: 48,
   },
   {
-    name: 'Marca 5',
-    logo: 'https://framerusercontent.com/images/H0KKUTpHfFG6WGbKSRSsycow5o.svg',
-    width: 221,
+    name: 'DoTerra',
+    logo: 'https://framerusercontent.com/images/rS1qYXMXwHsXXEoBkpWgE06wN4U.svg',
+    width: 188,
     height: 48,
   },
 ];
@@ -244,7 +244,7 @@ export default function Home() {
       <ScrollReveal delay={100}>
         <div id="estudio">
           <ProfileSection
-            image="/images/yolo.png"
+            image="/images/yolo1.jpeg"
             description={
               <>
                 Arquitecta mexicana con profunda pasión por el mundo sutil. Formada en <span className={profileStyles.highlight}>arquitectura holística</span> con Jacqueline Santiago, pionera en este enfoque. Mi vocación es acompañar a las personas a habitar plenamente sus espacios, integrando <span className={profileStyles.highlight}>sabiduría ancestral</span> y <span className={profileStyles.highlight}>diseño consciente</span>. Aunque el <span className={profileStyles.highlight}>Feng Shui Clásico</span> ha sido desplazado por prácticas modernas, sigo creyendo en su poder para reconectar con el equilibrio profundo. Especializada en <span className={profileStyles.highlight}>interiorismo</span>, <span className={profileStyles.highlight}>consultoría</span> y <span className={profileStyles.highlight}>diseño bioclimático</span> para crear <span className={profileStyles.highlight}>espacios armónicos</span>. Es un honor caminar contigo en este viaje.
@@ -274,7 +274,7 @@ export default function Home() {
 
       <ScrollReveal delay={100}>
         <div id="contacto">
-          <ContactSection links={contactLinks} image="/images/yolo.png" />
+          <ContactSection links={contactLinks} image="/images/yolo2.jpeg" />
         </div>
       </ScrollReveal>
     </main>

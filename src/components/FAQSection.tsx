@@ -18,7 +18,7 @@ interface FAQSectionProps {
 
 export default function FAQSection({
   title = 'FAQs',
-  description = 'Got questions? I\'ve got answers.',
+  description = '',
   faqs,
   image,
 }: FAQSectionProps) {
