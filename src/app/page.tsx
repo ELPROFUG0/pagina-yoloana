@@ -66,33 +66,15 @@ const projects: Project[] = [
 const brands: Brand[] = [
   {
     name: 'DoTerra',
-    logo: 'https://framerusercontent.com/images/rS1qYXMXwHsXXEoBkpWgE06wN4U.svg',
-    width: 188,
-    height: 48,
+    logo: '',
+    width: 0,
+    height: 0,
   },
   {
     name: 'VenuStudio',
-    logo: 'https://framerusercontent.com/images/H2wXOYXRTXqbDD6nOfOUiMJ5LM.svg',
-    width: 219,
-    height: 48,
-  },
-  {
-    name: 'DoTerra',
-    logo: 'https://framerusercontent.com/images/rS1qYXMXwHsXXEoBkpWgE06wN4U.svg',
-    width: 188,
-    height: 48,
-  },
-  {
-    name: 'VenuStudio',
-    logo: 'https://framerusercontent.com/images/H2wXOYXRTXqbDD6nOfOUiMJ5LM.svg',
-    width: 219,
-    height: 48,
-  },
-  {
-    name: 'DoTerra',
-    logo: 'https://framerusercontent.com/images/rS1qYXMXwHsXXEoBkpWgE06wN4U.svg',
-    width: 188,
-    height: 48,
+    logo: '',
+    width: 0,
+    height: 0,
   },
 ];
 

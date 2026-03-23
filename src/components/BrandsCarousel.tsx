@@ -56,13 +56,7 @@ export default function BrandsCarousel({ brands }: BrandsCarouselProps) {
         {duplicatedBrands.map((brand, index) => (
           <li key={`${brand.name}-${index}`} className={styles.item}>
             <div className={styles.logoWrapper}>
-              <Image
-                src={brand.logo}
-                alt={brand.name}
-                width={brand.width}
-                height={brand.height}
-                style={{ objectFit: 'contain' }}
-              />
+              <span className={styles.brandName}>{brand.name}</span>
             </div>
           </li>
         ))}

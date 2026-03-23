@@ -50,6 +50,13 @@
   width: auto;
 }
 
+.brandName {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
 @media (max-width: 809.98px) {
   .logoWrapper {
     height: 24px;
