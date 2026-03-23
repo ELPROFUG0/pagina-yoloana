@@ -21,8 +21,8 @@ interface BlogSectionProps {
 }
 
 export default function BlogSection({
-  title = 'Ideas, inspirations, and stories behind thoughtfully designed interiors.',
-  description = 'From materials to layouts, we share insights that inform and inspire better spaces.',
+  title = 'Ideas, inspiraciones e historias detrás de interiores diseñados con cuidado.',
+  description = 'Desde materiales hasta distribuciones, compartimos ideas que informan e inspiran mejores espacios.',
   posts,
 }: BlogSectionProps) {
   return (
@@ -41,9 +41,9 @@ export default function BlogSection({
             <Link href="/blog" className={styles.allArticlesButton}>
               <div className={styles.buttonContent}>
                 <div className={styles.buttonTextWrapper}>
-                  <p className={styles.buttonTitle}>All Articles</p>
+                  <p className={styles.buttonTitle}>Todos los Artículos</p>
                   <p className={styles.buttonDescription}>
-                    A closer look at our process, ideas, and approach to modern living.
+                    Una mirada más cercana a nuestro proceso, ideas y enfoque de vida moderna.
                   </p>
                 </div>
                 <div className={styles.buttonArrow}>
@@ -105,7 +105,7 @@ export default function BlogSection({
 
                   <div className={styles.viewAction}>
                     <div className={styles.viewButton}>
-                      <span>View Article</span>
+                      <span>Ver Artículo</span>
                     </div>
                     <div className={styles.arrow}>
                       <svg viewBox="0 0 24 24">

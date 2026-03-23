@@ -21,9 +21,9 @@ export default function TestimonialsSection({ testimonials }: TestimonialsSectio
       <div className={styles.content}>
         <div className={styles.headerText}>
           <div className={styles.headerContent}>
-            <h2 className={styles.sectionTitle}>Testimonials</h2>
+            <h2 className={styles.sectionTitle}>Testimonios</h2>
           </div>
-          <h3 className={styles.title}>Client Highlights</h3>
+          <h3 className={styles.title}>Lo que dicen nuestros clientes</h3>
         </div>
 
         <div className={styles.testimonialGrid}>

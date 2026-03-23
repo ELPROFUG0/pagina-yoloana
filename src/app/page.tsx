@@ -95,9 +95,9 @@ const faqs = [
       'Sí, trabajamos con una red de constructores y artesanos de confianza. Supervisamos todo el proceso de construcción para asegurar que el diseño se ejecute según los más altos estándares.',
   },
   {
-    question: '¿Pueden ayudarnos con nuestro pitch deck?',
+    question: '¿Pueden ayudarnos con nuestra presentación para inversionistas?',
     answer:
-      'Absolutamente. Ofrecemos servicios de visualización arquitectónica y presentaciones profesionales que comunican efectivamente su visión a inversionistas y stakeholders.',
+      'Absolutamente. Ofrecemos servicios de visualización arquitectónica y presentaciones profesionales que comunican efectivamente su visión a inversionistas y partes interesadas.',
   },
   {
     question: '¿Cómo empezamos?',
