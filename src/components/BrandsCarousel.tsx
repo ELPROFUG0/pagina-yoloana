@@ -30,8 +30,9 @@ export default function BrandsCarousel({ brands }: BrandsCarouselProps) {
       position -= speed;
 
       const firstItem = carousel.children[0] as HTMLElement;
-      const gap = 42;
-      const totalWidth = (firstItem?.offsetWidth || 0 + gap) * brands.length;
+      const gap = 60;
+      const itemWidth = (firstItem?.offsetWidth || 100) + gap;
+      const totalWidth = itemWidth * brands.length * 5;
 
       if (Math.abs(position) >= totalWidth) {
         position = 0;
@@ -48,7 +49,7 @@ export default function BrandsCarousel({ brands }: BrandsCarouselProps) {
     };
   }, [brands.length]);
 
-  const duplicatedBrands = [...brands, ...brands, ...brands];
+  const duplicatedBrands = [...brands, ...brands, ...brands, ...brands, ...brands, ...brands, ...brands, ...brands, ...brands, ...brands];
 
   return (
     <section className={styles.carouselContainer}>
